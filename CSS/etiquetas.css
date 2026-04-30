@@ -1,0 +1,43 @@
+.etiqueta-vuelo {
+    border-radius: 0.25em 0.25em 0 0;
+    background-color: rgb(119, 126, 125);
+    color: white;
+    max-width: fit-content;
+    padding: 0.25em;
+}
+
+.aceptar {
+    background-color: rgb(130, 185, 93);
+    border-radius: 0.25em;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-shadow: 50%;
+}
+
+.reset {
+    background-color: rgb(185, 111, 93);
+    border-radius: 0.25em;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.campos-form {
+    border-radius: 0.25em;
+    border: none;
+    height: 2.5em;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%;
+    gap: 1em;
+    padding: 1em 0 1em 0;
+     background-color: rgb(124, 169, 163);
+     border-radius: 0 0 0.25em 0.25em;
+}

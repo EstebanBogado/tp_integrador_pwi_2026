@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP INTEGRADOR 2026</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/etiquetas.css">
 </head>
 <!-- ****************************************************
     Se deberá maquetar como mínimo las siguientes vistas:
@@ -29,7 +30,23 @@
         </nav>
     </header>
     <main>
-        <p>vuelos y pasajes</p>
+        <section class="section-vuelo">
+            <p class="etiqueta-vuelo">Vuelos</p>
+            <form action="" class="form">
+                <label for="desde">Desde</label>
+                <input type="text" name="desde" id="" class="campos-form">
+                <label for="fecha-salida">Fecha Salida</label>
+                <input type="date" name="fecha-salida" id="" class="campos-form">
+                <label for="hora-salida">Hora Salida</label>
+                <input type="time" name="hora-salida" id="" class="campos-form">
+                <label for="destino">Destino</label>
+                <input type="text" name="destino" id="" class="campos-form">
+                <div>
+                    <input type="submit" name="buscar" id="" class="aceptar" value="BUSCAR">
+                    <input type="reset" name="cancelar" id="" class="reset" value="CANCELAR">
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; Todos los derechos reservados 2026.</p>

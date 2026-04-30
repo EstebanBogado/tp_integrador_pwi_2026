@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    color: rgba(white, white, white, white);;
+    color: rgba(white, white, white, white);
 }
 
 
@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     margin: 0 auto;
     padding: 0;
-    height: 100%;
+    height: 100vh;
     font-family: 'Courier New', Courier, monospace;
     min-height: 100vh;
     width: 80%;
@@ -34,12 +34,13 @@ footer {
     background-color: #5b8787;
     height: 5em;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 main {
+    background-image: url(../IMG/avion-despegando.jpg);
+    background-size: cover;
     display: flex;
-    height: 30em;
+    height: 100vh;
     background-color: rgb(185, 191, 190);
     color: rgb(94, 93, 93);
     padding: 2em;
@@ -57,5 +58,4 @@ nav {
     align-items: center;
     padding: 0.5em;
     height: 3em;
-
 }

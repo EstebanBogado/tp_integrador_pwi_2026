@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    color: rgba(white, white, white, white);
+}
+
+/* body {
+    font-size: 1.5em;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    width: 80%;
+    height: 100%;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Asegura que el body tenga altura definida */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Organiza hijos en columna */
+    min-height: 100vh;
+    /* Ocupa al menos toda la altura de la ventana */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    color: white;
+    background-color: #5b8787;
+    padding: 0 2em 0 2em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background-color: #5b8787;
+ height: 5em;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;
+    height: 3em;
+
+}

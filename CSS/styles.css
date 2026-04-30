@@ -39,6 +39,8 @@ footer {
 main {
     background-image: url(../IMG/avion-despegando.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     height: 100vh;
     background-color: rgb(185, 191, 190);

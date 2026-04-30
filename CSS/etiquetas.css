@@ -24,6 +24,9 @@
 }
 
 .campos-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     border-radius: 0.25em;
     border: none;
     height: 2.5em;
@@ -31,7 +34,8 @@
 
 .form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     max-width: 100%;
     gap: 1em;

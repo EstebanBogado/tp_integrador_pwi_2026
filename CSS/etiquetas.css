@@ -32,7 +32,6 @@
 .form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
     max-width: 100%;
     gap: 1em;

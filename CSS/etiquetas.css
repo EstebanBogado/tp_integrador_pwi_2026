@@ -41,8 +41,11 @@
     border-radius: 0 0 0.25em 0.25em;
 }
 
-.section-vuelo{
+.section-vuelo {
     display: flex;
     flex-direction: column;
+    justify-content: start;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
 }

@@ -64,27 +64,82 @@
     max-width: 100%;
 }
 
+.inicio {
+    text-decoration: none;
+    color: white;
+}
+
 label {
     display: inline-flex;
     align-items: center;
 }
 
-.grilla-resultados{
-
+.grilla-resultados {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: repeat(2, 2fr);
-    background-color: green;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     width: 100%;
     max-width: 100%;
-    padding: 0.75em;
-    margin: 0.75em;
-    
+    padding: 2em;
+    margin: 2em;
+
 }
 
-.datos-de-vuelos{
-    display: flex;
+.datos-de-vuelos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-top: 1em;
     height: 15em;
+    margin: 2em;
+    background-color: #ffffff;
+    border-radius: 0.75em;
+    opacity: 0.90;
+    align-content: space-evenly;
+    grid-auto-flow: row;
+    justify-items: center;
+}
+
+.salida-llegada {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+
+}
+
+.horario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1em;
+}
+
+.precio-base {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1em;
+    font-weight: bold;
+}
+
+.precio-amigo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1em;
+    font-weight: bold;
+}
+
+.tarifas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 198, 198);
+    border-radius: 0.25em;
+    padding: 0.5em;
 }

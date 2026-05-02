@@ -61,7 +61,7 @@
     justify-content: start;
     align-items: center;
     width: 100%;
-    max-width: 100%;
+    max-width: 100vw;
 }
 
 .inicio {
@@ -105,8 +105,6 @@ label {
     align-content: space-evenly;
     justify-items: center;
 }
-
-
 
 .ida {
     grid-area: ida;
@@ -193,63 +191,66 @@ label {
     padding: 0.5em;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-
-    main {
-        background-image: url(../IMG/avion-despegando.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        flex: 1;
-        min-height: calc(100vh -5em -5em);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-height: auto;
-        background-color: rgb(185, 191, 190);
-        color: rgb(94, 93, 93);
+@media (max-width: 768px) {
+    .grilla-resultados {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 1em;
         padding: 1em;
-        box-sizing: content-box;
     }
 
-    .grilla-resultados {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        max-width: 100%;
-        padding: 2em;
-        box-sizing: content-box;
-        gap: 0.75em;
+    .datos-de-vuelos {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "ida"
+            "salida"
+            "llegada"
+            "vuelta"
+            "precio-base"
+            "precio-amigo";
+        height: auto;
+        margin: 1em 0;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1em;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 1em;
+        height: auto;
+    }
+
+    .logo img {
+        max-width: 150px;
+        height: auto;
     }
 }
 
-@media (max-width: 768px) {
-
-    main {
-        background-image: url(../IMG/avion-despegando.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        flex: 1;
-        min-height: calc(100vh -5em -5em);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-height: auto;
-        background-color: rgb(185, 191, 190);
-        color: rgb(94, 93, 93);
-        padding: 2em;
-    }
-
+@media (min-width: 769px) and (max-width: 1024px) {
     .grilla-resultados {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        max-width: 100%;
-        padding: 2em;
-        gap: 0.75em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        margin: 1.5em;
+        padding: 1.5em;
     }
+
+    .datos-de-vuelos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "ida ida"
+            "salida llegada"
+            "vuelta vuelta"
+            "precio-base precio-amigo";
+        height: auto;
+    }
+
+    .logo img {
+        max-width: 200px;
+        height: auto;
+    }
+
 }

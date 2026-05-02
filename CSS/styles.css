@@ -3,9 +3,10 @@
     color: rgba(white, white, white, white);
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
 
 body {
@@ -16,8 +17,7 @@ body {
     height: 100vh;
     font-family: 'Courier New', Courier, monospace;
     min-height: 100vh;
-    width: 90%;
-}
+    width: 100%;
 
 header {
     display: flex;
@@ -73,11 +73,13 @@ nav {
     height: 3em;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
-  max-height: 100%;   /* la imagen nunca supera la altura del header */
-  height: auto;       /* mantiene proporción */
-  width: auto; 
-  
+    max-height: 100%;
+    /* la imagen nunca supera la altura del header */
+    height: auto;
+    /* mantiene proporción */
+    width: auto;
+
 }

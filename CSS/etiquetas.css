@@ -82,13 +82,18 @@ label {
     max-width: 100%;
     padding: 2em;
     margin: 2em;
-
 }
 
 .datos-de-vuelos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    flex-direction: row;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "ida ida"
+        "salida salida"
+        "vuelta vuelta"
+        "llegada llegada"
+        "precio-base precio-amigo";
     justify-content: center;
     align-items: center;
     padding-top: 1em;
@@ -98,8 +103,52 @@ label {
     border-radius: 0.75em;
     opacity: 0.90;
     align-content: space-evenly;
-    grid-auto-flow: row;
     justify-items: center;
+}
+
+
+
+.ida {
+    grid-area: ida;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    background-color: rgb(209, 198, 198);
+    border-radius: 0.25em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.vuelta {
+    grid-area: vuelta;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    background-color: rgb(209, 198, 198);
+    border-radius: 0.25em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+
+.salida {
+    grid-area: salida;
+}
+
+.llegada {
+    grid-area: llegada;
+}
+
+.precio-amigo {
+    grid-area: tarifas;
+}
+
+.precio-base {
+    grid-area: tarifas;
 }
 
 .salida-llegada {
@@ -142,4 +191,65 @@ label {
     background-color: rgb(209, 198, 198);
     border-radius: 0.25em;
     padding: 0.5em;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    main {
+        background-image: url(../IMG/avion-despegando.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex: 1;
+        min-height: calc(100vh -5em -5em);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: auto;
+        background-color: rgb(185, 191, 190);
+        color: rgb(94, 93, 93);
+        padding: 1em;
+        box-sizing: content-box;
+    }
+
+    .grilla-resultados {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        max-width: 100%;
+        padding: 2em;
+        box-sizing: content-box;
+        gap: 0.75em;
+    }
+}
+
+@media (max-width: 768px) {
+
+    main {
+        background-image: url(../IMG/avion-despegando.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex: 1;
+        min-height: calc(100vh -5em -5em);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: auto;
+        background-color: rgb(185, 191, 190);
+        color: rgb(94, 93, 93);
+        padding: 2em;
+    }
+
+    .grilla-resultados {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        padding: 2em;
+        gap: 0.75em;
+    }
 }

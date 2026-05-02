@@ -3,10 +3,10 @@
     color: rgba(white, white, white, white);
 }
 
-/* html, body {
+html, body {
   height: 100%;
   margin: 0;
-} */
+}
 
 body {
     display: flex;
@@ -27,6 +27,7 @@ header {
     color: white;
     background-color: #5b8787;
     padding: 0 2em 0 2em;
+    height: 5em;
 }
 
 footer {
@@ -48,7 +49,7 @@ main {
     background-repeat: no-repeat;
     display: flex;
     flex: 1;
-    min-height: calc(100vh -4em -5em);
+    min-height: calc(100vh -5em -5em);
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -68,6 +69,15 @@ nav {
     gap: 2em;
     justify-content: space-around;
     align-items: center;
-    padding: 0.5em;
+    padding: 1em;
     height: 3em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+  max-height: 100%;   /* la imagen nunca supera la altura del header */
+  height: auto;       /* mantiene proporción */
+  width: auto; 
+  
 }

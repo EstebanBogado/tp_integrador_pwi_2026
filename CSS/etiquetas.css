@@ -52,7 +52,9 @@
     gap: 1em;
     padding: 1em 1em 1em 1em;
     background-color: rgb(124, 169, 163);
-    border-radius: 0 0 0.25em 0.25em;
+    border-radius: 0.50em;
+    /* 0 0 0.25em 0.25em; */
+
 }
 
 .section-vuelo {
@@ -191,6 +193,78 @@ label {
     padding: 0.5em;
 }
 
+.destinos-favoritos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+    padding: 1em;
+    color: white;
+    background-color: #5b8787;
+    align-items: center;
+    width: 100%;
+    max-width: 100vw;
+    border-radius: 0.50em;
+}
+
+.seccion-vacaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    width: auto;
+    gap: 1em;
+}
+
+.seccion-vacaciones img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0 0 0.50em 0.50em;
+    height: 30em;
+    opacity: 0.8;
+}
+
+.seccion-vacaciones a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.titulo {
+    text-align: center;
+    padding: 1em;
+    background-color: #ffffff;
+    opacity: 0.75;
+    border-radius: 0.50em 0.50em 0 0;
+}
+
+.detalles-vuelo {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.vuelo{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    height: 15em;
+    margin: 2em;
+    background-color: #ffffff;
+    border-radius: 0.75em;
+   
+}
+
+
+/* *********************************************************************
+RESPONSIVE DESIGN
+********************************************************************* */
+
 @media (max-width: 768px) {
     .grilla-resultados {
         grid-template-columns: 1fr;
@@ -228,6 +302,43 @@ label {
         max-width: 150px;
         height: auto;
     }
+
+    .destinos-favoritos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 3em;
+        padding: 1em;
+        color: white;
+        background-color: #5b8787;
+        align-items: center;
+        width: 100%;
+        max-width: 100vw;
+        border-radius: 0.50em;
+    }
+
+    .seccion-vacaciones {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
+        width: auto;
+        gap: 1em;
+    }
+
+    .seccion-vacaciones img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0 0 0.50em 0.50em;
+        height: 30em;
+        opacity: 0.8;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -251,6 +362,43 @@ label {
     .logo img {
         max-width: 200px;
         height: auto;
+    }
+
+    .destinos-favoritos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 3em;
+        padding: 1em;
+        color: white;
+        background-color: #5b8787;
+        align-items: center;
+        width: 100%;
+        max-width: 100vw;
+        border-radius: 0.50em;
+    }
+
+    .seccion-vacaciones {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
+        width: auto;
+        gap: 1em;
+    }
+
+    .seccion-vacaciones img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0 0 0.50em 0.50em;
+        height: 30em;
+        opacity: 0.8;
     }
 
 }

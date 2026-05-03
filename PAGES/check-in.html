@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check-In Online</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/etiquetas.css">
+  <link rel="stylesheet" href="../CSS/check-in.css">
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <a href="../index.html" class="logo"><img src="../IMG/logo-aero-viajes.jpg" width="300px" height="200px"
+          alt="logo aero viajes"></a>
+      <p>inicio</p>
+      <p>vuelos</p>
+      <p>ofertas</p>
+      <p>contacto</p>
+      <p>ingresar/registrarse</p>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Check-In Online</h1>
+    <p>Complete su check-in rápido y sencillo</p>
+
+    <section class="formulario-checkin">
+      <form>
+        <fieldset>
+          <p class="titulo">Datos del vuelo</p>
+          <label>Código de reserva:</label>
+          <input type="text" name="codigo">
+          <label>Apellido:</label>
+          <input type="text" name="apellido">
+          <button class="buscar-reserva">Buscar reserva</button>
+        </fieldset>
+
+        <fieldset>
+          <p class="titulo">Datos del pasajero</p>
+          <label>Nombre:</label>
+          <input type="text" name="nombre">
+          <label>Documento / Pasaporte:</label>
+          <input type="text" name="documento">
+        </fieldset>
+
+        <fieldset>
+          <p>Opciones adicionales</p>
+          <label><input type="checkbox"> Equipaje extra</label>
+          <label><input type="checkbox"> Comida especial</label>
+          <label><input type="checkbox"> Asistencia</label>
+        </fieldset>
+
+        <div class="botones">
+          <button class="confirmar">Confirmar Check-In</button>
+          <button class="cancelar">Cancelar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Todos los derechos reservados 2026.</p>
+  </footer>
+</body>
+
+</html>

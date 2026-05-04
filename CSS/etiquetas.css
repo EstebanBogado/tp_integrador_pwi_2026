@@ -53,8 +53,6 @@
     padding: 1em 1em 1em 1em;
     background-color: rgb(124, 169, 163);
     border-radius: 0.50em;
-    /* 0 0 0.25em 0.25em; */
-
 }
 
 .section-vuelo {
@@ -79,7 +77,6 @@ label {
 .grilla-resultados {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     width: 100%;
     max-width: 100%;
     padding: 2em;
@@ -89,8 +86,9 @@ label {
 .datos-de-vuelos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas:
+        "compania compania"
         "ida ida"
         "salida salida"
         "vuelta vuelta"
@@ -98,14 +96,36 @@ label {
         "precio-base precio-amigo";
     justify-content: center;
     align-items: center;
-    padding-top: 1em;
-    height: 15em;
+    padding: 1em;
+    max-height: fit-content;
     margin: 2em;
     background-color: #ffffff;
     border-radius: 0.75em;
     opacity: 0.90;
     align-content: space-evenly;
     justify-items: center;
+}
+
+.aerolinea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.compania {
+    grid-area: compania;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: auto;
+    color: rgb(209, 198, 198);
+    background-color: #5b8787;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 .ida {
@@ -120,6 +140,8 @@ label {
     padding: 0.5em;
     font-weight: bold;
 }
+
+
 
 .vuelta {
     grid-area: vuelta;
@@ -144,11 +166,11 @@ label {
 }
 
 .precio-amigo {
-    grid-area: tarifas;
+    grid-area: precio-amigo;
 }
 
 .precio-base {
-    grid-area: tarifas;
+    grid-area: precio-base;
 }
 
 .salida-llegada {
@@ -247,7 +269,7 @@ label {
     grid-template-columns: 1fr 4fr;
 }
 
-.vuelo{
+.vuelo {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -257,7 +279,7 @@ label {
     margin: 2em;
     background-color: #ffffff;
     border-radius: 0.75em;
-   
+
 }
 
 

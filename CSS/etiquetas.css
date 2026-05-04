@@ -94,8 +94,6 @@ label {
     max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    /*    padding: 2em;
-   margin: 2em;  */
 }
 
 .datos-de-vuelos {
@@ -169,6 +167,7 @@ label {
     align-items: center;
     width: 5em;
     background-color: 5b8787;
+    background-color: rgb(209, 198, 198);
     color: rgb(120, 74, 74);
     border-radius: 0.25em;
     padding: 0.5em;
@@ -306,7 +305,6 @@ label {
     margin: 2em;
     background-color: #ffffff;
     border-radius: 0.75em;
-
 }
 
 

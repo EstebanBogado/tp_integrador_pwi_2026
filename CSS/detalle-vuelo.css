@@ -1,0 +1,60 @@
+.armado-del-vuelo {
+    display: grid;
+    grid-template-columns: 2fr 0.50fr 2fr 0.50fr 2fr;
+    width: auto;
+    max-width: 100%;
+    margin: 1em;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 0.75em;
+    border-style: solid;
+}
+
+.secciones-cabina {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+input {
+    width: 2em;
+    height: 2em;
+    border-color: rgb(240, 167, 31);
+    border-style: solid;
+    border-radius: 0.50em;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.etiqueta-asientos {
+    border-radius: 0.25em;
+    background-color: rgb(119, 126, 125);
+    color: white;
+    max-width: fit-content;
+    padding: 1em;
+    margin: 1em;
+}
+
+.ubicacion-cabina {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.etiqueta-confirmar {
+    border-radius: 0.25em;
+    background-color: rgb(130, 185, 93);
+    color: white;
+    max-width: fit-content;
+    padding: 1em;
+    margin: 1em;
+}
+
+/* *********************************************************************
+RESPONSIVE DESIGN
+********************************************************************* */
+
+@media (max-width: 768px) {}
+
+@media (min-width: 769px) and (max-width: 1024px) {}

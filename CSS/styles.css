@@ -87,3 +87,8 @@ nav {
     width: auto;
 
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}

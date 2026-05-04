@@ -35,18 +35,31 @@
     flex-direction: row;
     justify-content: space-around;
     gap: 0.75em;
+    width: max-content;
+    height: fit-content;
 }
 
 .campos-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     border-radius: 0.25em;
     border: none;
     height: 2.5em;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
 }
 
 .form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 100%;
     gap: 1em;
@@ -79,8 +92,10 @@ label {
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     max-width: 100%;
-    padding: 2em;
-    margin: 2em;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /*    padding: 2em;
+   margin: 2em;  */
 }
 
 .datos-de-vuelos {
@@ -98,12 +113,14 @@ label {
     align-items: center;
     padding: 1em;
     max-height: fit-content;
-    margin: 2em;
+    margin: 0;
     background-color: #ffffff;
     border-radius: 0.75em;
     opacity: 0.90;
     align-content: space-evenly;
     justify-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .aerolinea {
@@ -308,6 +325,7 @@ RESPONSIVE DESIGN
     .datos-de-vuelos {
         grid-template-columns: 1fr;
         grid-template-areas:
+            "compania"
             "ida"
             "salida"
             "llegada"
@@ -384,6 +402,7 @@ RESPONSIVE DESIGN
     .datos-de-vuelos {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
+            "compania compania"
             "ida ida"
             "salida llegada"
             "vuelta vuelta"

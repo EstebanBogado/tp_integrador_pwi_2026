@@ -120,7 +120,7 @@ label {
     justify-content: start;
     align-items: center;
     width: auto;
-    color: rgb(209, 198, 198);
+    color: white;
     background-color: #5b8787;
     border-radius: 0.25em;
     padding: 0.5em;
@@ -136,6 +136,7 @@ label {
     align-items: center;
     width: 5em;
     background-color: rgb(209, 198, 198);
+    color: rgb(120, 74, 74);
     border-radius: 0.25em;
     padding: 0.5em;
     font-weight: bold;
@@ -150,7 +151,8 @@ label {
     justify-content: center;
     align-items: center;
     width: 5em;
-    background-color: rgb(209, 198, 198);
+    background-color: 5b8787;
+    color: rgb(120, 74, 74);
     border-radius: 0.25em;
     padding: 0.5em;
     font-weight: bold;
@@ -179,6 +181,7 @@ label {
     align-items: center;
     justify-content: center;
     padding: 1em;
+    color: rgb(120, 74, 74);
 
 }
 
@@ -187,6 +190,8 @@ label {
     flex-direction: row;
     justify-content: center;
     margin-left: 1em;
+    color: rgb(120, 74, 74);
+
 }
 
 .precio-base {
@@ -195,6 +200,8 @@ label {
     justify-content: center;
     margin-left: 1em;
     font-weight: bold;
+    color: rgb(120, 74, 74);
+
 }
 
 .precio-amigo {
@@ -203,6 +210,8 @@ label {
     justify-content: center;
     margin-left: 1em;
     font-weight: bold;
+    color: rgb(120, 74, 74);
+
 }
 
 .tarifas {
@@ -211,6 +220,7 @@ label {
     justify-content: center;
     align-items: center;
     background-color: rgb(209, 198, 198);
+    color: rgb(120, 74, 74);
     border-radius: 0.25em;
     padding: 0.5em;
 }

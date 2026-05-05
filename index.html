@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP INTEGRADOR 2026</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="stylesheet" href="../CSS/etiquetas.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel=" stylesheet" href="/CSS/etiquetas.css">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <!-- ****************************************************
     Se deberá maquetar como mínimo las siguientes vistas:
@@ -35,38 +38,89 @@
     </header>
     <main>
         <section class="section-vuelo">
-            <p class="etiqueta-vuelo">Vuelos</p>
-            <form action="" class="form">
+            <p class="etiqueta-vuelo">
+                <i class="fa-solid fa-magnifying-glass"></i> Busca tu vuelo
+            </p>
 
-                <label for="desde">Desde</label>
-                <select name="desde" id="" class="campos-form">
-                    <option value=""></option>
-                    <option value="Ezeiza, Buenos Aires">Ezeiza, Buenos Aires</option>
-                    <option value="Aeroparque, CABA">Aeroparque, CABA</option>
-                    <option value="Bariloche, Rio Negro">Bariloche, Rio Negro</option>
-                    <option value="Mendoza, Mendoza">Mendoza, Mendoza</option>
-                    <option value="Carlos Paz, Códoba">Carlos Paz, Códoba</option>
-                    <option value="Cafayate, Salta">Cafayate, Salta</option>
-                    <option value="Ushuahia, Tierra del Fuego">Ushuahia, Tierra del Fuego</option>
-                </select>
+            <form action="../PAGES/resultado busqueda.html" method="get" class="form">
 
-                <label for="destino">Destino</label>
-                <select name="desde" id="" class="campos-form">
-                    <option value=""></option>
-                    <option value="Ezeiza, Buenos Aires">Ezeiza, Buenos Aires</option>
-                    <option value="Aeroparque, CABA">Aeroparque, CABA</option>
-                    <option value="Bariloche, Rio Negro">Bariloche, Rio Negro</option>
-                    <option value="Mendoza, Mendoza">Mendoza, Mendoza</option>
-                    <option value="Carlos Paz, Códoba">Carlos Paz, Códoba</option>
-                    <option value="Cafayate, Salta">Cafayate, Salta</option>
-                    <option value="Ushuahia, Tierra del Fuego">Ushuahia, Tierra del Fuego</option>
-                </select>
+                <div class="form-row form-tipo">
+                    <label class="radio-label">
+                        <input type="radio" name="tipo-viaje" value="ida-vuelta" checked>
+                        Ida y vuelta
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="tipo-viaje" value="solo-ida">
+                        Solo ida
+                    </label>
+                </div>
 
-                <label for="fecha-salida">Fecha Salida</label>
-                <input type="date" name="fecha-salida" id="" class="campos-form">
-                <div class="buscar-cancelar">
-                    <a href="../PAGES/resultado busqueda.html" class="aceptar">BUSCAR </a>
-                    <input type="reset" name="cancelar" id="" class="reset" value="CANCELAR">
+                <div class="form-group">
+                    <label for="desde">
+                        <i class="fa-solid fa-plane-departure"></i> Origen
+                    </label>
+                    <select name="desde" id="desde" class="campos-form">
+                        <option value="">Seleccionar origen</option>
+                        <option value="BUE">Ezeiza, Buenos Aires (EZE)</option>
+                        <option value="AEP">Aeroparque, CABA (AEP)</option>
+                        <option value="BRC">Bariloche, Río Negro (BRC)</option>
+                        <option value="COR">Córdoba (COR)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="destino">
+                        <i class="fa-solid fa-plane-arrival"></i> Destino
+                    </label>
+                    <select name="destino" id="destino" class="campos-form">
+                        <option value="">Seleccionar destino</option>
+                        <option value="MAD">Madrid (MAD)</option>
+                        <option value="MIA">Miami (MIA)</option>
+                        <option value="LIM">Lima (LIM)</option>
+                        <option value="GRU">São Paulo (GRU)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha-salida">
+                        <i class="fa-regular fa-calendar"></i> Fecha Ida
+                    </label>
+                    <input type="date" name="fecha-salida" id="fecha-salida" class="campos-form">
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha-vuelta">
+                        <i class="fa-regular fa-calendar"></i> Fecha Vuelta
+                    </label>
+                    <input type="date" name="fecha-vuelta" id="fecha-vuelta" class="campos-form">
+                </div>
+
+                <div class="form-group">
+                    <label for="pasajeros">
+                        <i class="fa-solid fa-user"></i> Pasajeros
+                    </label>
+                    <select name="pasajeros" id="pasajeros" class="campos-form">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="clase">
+                        <i class="fa-solid fa-chair"></i> Clase
+                    </label>
+                    <select name="clase" id="clase" class="campos-form">
+                        <option value="economica">Económica</option>
+                        <option value="ejecutiva">Ejecutiva</option>
+                        <option value="primera">Primera</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <input type="submit" value="BUSCAR VUELOS" class="aceptar">
+                    <input type="reset" value="CANCELAR" class="reset">
                 </div>
             </form>
         </section>

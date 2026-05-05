@@ -1,0 +1,179 @@
+:root {
+    --color-primario: #5b8787;
+    --color-primario-dark: #3d5f5f;
+    --color-primario-light: #7ca9a3;
+    --color-primario-xlight: rgba(255, 255, 255, 0.15);
+    --color-blanco: #ffffff;
+    --color-texto: #4a4a4a;
+    --color-aceptar: #7fb069;
+    --color-cancelar: #c2675d;
+}
+
+.section-vuelo {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+    background-color: var(--color-primario-light);
+    padding: 1em;
+    border-radius: 0.8em;
+    width: 100%;
+    max-width: 90em;
+    box-sizing: border-box;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.form-group label {
+    color: var(--color-blanco);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.campos-form {
+    padding: 0.6em;
+    border-radius: 0.4em;
+    border: 0.0625em solid transparent;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--color-texto);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.aceptar, .reset {
+    padding: 0.8em 2em;
+    border-radius: 0.4em;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    color: var(--color-blanco);
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.aceptar {
+    background-color: var(--color-aceptar);
+}
+
+.reset {
+    background-color: var(--color-cancelar);
+}
+
+.aceptar:hover, .reset:hover {
+    filter: brightness(1.1);
+    transform: translateY(-0.125em);
+}
+
+.destinos-favoritos {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5em;
+    margin: 2.5em auto;
+    width: 95%;
+    max-width: 75em;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+}
+
+.destinos-favoritos h1 {
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 0.05em;
+}
+
+.seccion-vacaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5em;
+    padding: 0 2em 3em 2em;
+    width: 100%;
+    max-width: 75em;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.seccion-vacaciones article {
+    background: var(--color-blanco);
+    border-radius: 0.6em;
+    overflow: hidden;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.seccion-vacaciones article:hover {
+    transform: translateY(-0.3em);
+}
+
+.titulo {
+    padding: 1.2em;
+    color: var(--color-primario-dark);
+    font-weight: bold;
+    text-align: center;
+    background: #fdfdfd;
+    font-size: 1em;
+    border-bottom: 0.0625em solid #eee;
+}
+
+.seccion-vacaciones img {
+    width: 100%;
+    height: 17em;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 64em) {
+    .form {
+        flex-direction: column;
+        padding: 1.5em;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .aceptar, .reset {
+        width: 100%;
+    }
+
+    .seccion-vacaciones {
+        grid-template-columns: 1fr;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 48em) {
+    .destinos-favoritos {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .destinos-favoritos h1 {
+        font-size: 1.3em;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyNow - Mis Reservas</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/etiquetas.css">
+    <link rel="stylesheet" href="/CSS/misreservas.css">
+    <script src="https://kit.fontawesome.com/tu-kit.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <a href="../index.html" class="logo"><img src="../IMG/logo-aero-viajes.jpg" width="300px" height="200px"
+                    alt="logo aero viajes"></a>
+            <a href="../index.html">
+                <p>inicio</p>
+            </a>
+            <a href="../PAGES/resultado busqueda.html">
+                <p>vuelos</p>
+            </a>
+            <p>ofertas</p>
+            <p>contacto</p>
+            <p>ingresar/registrarse</p>
+        </nav>
+    </header>
+
+    <main class="main-reservas">
+        <div class="reservas-layout section-vuelo">
+
+            <aside class="reservas-sidebar">
+                <p class="sidebar-title">Perfil de Usuario</p>
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="sidebar-link"><i class="fa-regular fa-user"></i> Datos Personales</a></li>
+                    <li><a href="#" class="sidebar-link active"><i class="fa-solid fa-ticket"></i> Mis Vuelos</a></li>
+                </ul>
+            </aside>
+
+            <section class="reservas-content">
+                <p class="etiqueta-vuelo">
+                    <i class="fa-solid fa-plane-list"></i> Historial de Reservas
+                </p>
+
+                <div class="acordeon-contenedor">
+                    <div class="acordeon-item">
+                        <input type="checkbox" id="vuelo1" class="acordeon-check">
+                        <label for="vuelo1" class="acordeon-header">
+                            <div class="info-header">
+                                <i class="fa-solid fa-plane"></i>
+                                <span class="ruta-principal">Buenos Aires (BUE) → Madrid (MAD)</span>
+                            </div>
+                            <div class="meta-header">
+                                <span class="precio-badge">$ 550 USD</span>
+                                <i class="fa-solid fa-chevron-down flecha"></i>
+                            </div>
+                        </label>
+                        <div class="acordeon-body">
+                            <div class="detalle-reserva">
+                                <p><strong><i class="fa-regular fa-calendar"></i> Fechas:</strong> 10/08/2024 al
+                                    20/08/2024</p>
+                                <p><strong><i class="fa-regular fa-clock"></i> Horario:</strong> 12:00 PM (Salida)</p>
+                                <p><strong><i class="fa-solid fa-chair"></i> Clase:</strong> Económica</p>
+                                <hr>
+                                <div class="total-vuelo">
+                                    <span>Total Pagado:</span>
+                                    <span class="monto">$ 550.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acordeon-item">
+                        <input type="checkbox" id="vuelo2" class="acordeon-check">
+                        <label for="vuelo2" class="acordeon-header">
+                            <div class="info-header">
+                                <i class="fa-solid fa-plane"></i>
+                                <span class="ruta-principal">New York (JFK) → París (CDG)</span>
+                            </div>
+                            <div class="meta-header">
+                                <span class="precio-badge">$ 620 USD</span>
+                                <i class="fa-solid fa-chevron-down flecha"></i>
+                            </div>
+                        </label>
+                        <div class="acordeon-body">
+                            <div class="detalle-reserva">
+                                <p><strong><i class="fa-regular fa-calendar"></i> Fechas:</strong> 15/09/2024 al
+                                    25/09/2024</p>
+                                <p><strong><i class="fa-regular fa-clock"></i> Horario:</strong> 09:30 AM (Salida)</p>
+                                <hr>
+                                <div class="total-vuelo">
+                                    <span>Total Pagado:</span>
+                                    <span class="monto">$ 620.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Todos los derechos reservados 2026.</p>
+    </footer>
+</body>
+
+</html>

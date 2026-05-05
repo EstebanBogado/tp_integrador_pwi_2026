@@ -1,0 +1,220 @@
+.reservas-layout {
+    display: grid;
+    grid-template-columns: 17.5em 1fr;
+    gap: 2em;
+    padding: 2em;
+    max-width: 75em;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.reservas-sidebar {
+    background: white;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    box-shadow: 0 0.25em 0.625em rgba(0,0,0,0.05);
+}
+
+.sidebar-title {
+    font-weight: bold;
+    color: var(--color-primario);
+    margin-bottom: 1em;
+    border-bottom: 0.125em solid var(--color-primario-light);
+    padding-bottom: 0.5em;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    padding: 0.8em;
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: 0.3s;
+    border-radius: 0.3em;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    background-color: var(--color-primario-light);
+    color: white;
+}
+
+.acordeon-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.acordeon-item {
+    background: white;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 0.125em 0.3125em rgba(0,0,0,0.1);
+}
+
+.acordeon-check {
+    display: none; 
+}
+
+.acordeon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em;
+    cursor: pointer;
+    background-color: #fcfcfc;
+    transition: background 0.3s;
+}
+
+.acordeon-header:hover {
+    background-color: #f0f4f4;
+}
+
+.ruta-principal {
+    font-weight: bold;
+    color: #333;
+}
+
+.precio-badge {
+    background-color: var(--color-aceptar);
+    color: white;
+    padding: 0.3em 0.8em;
+    border-radius: 1em;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.acordeon-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    background: white;
+}
+
+.detalle-reserva {
+    padding: 1.5em;
+    border-top: 0.0625em solid #eee;
+    line-height: 1.8;
+}
+
+.acordeon-check:checked ~ .acordeon-body {
+    max-height: 31.25em;
+}
+
+.acordeon-check:checked ~ .acordeon-header .flecha {
+    transform: rotate(180deg);
+}
+
+.acordeon-check:checked ~ .acordeon-header {
+    border-bottom: 0.125em solid var(--color-primario);
+}
+
+.total-vuelo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.monto {
+    font-size: 1.4em;
+    color: var(--color-primario-dark);
+}
+
+@media (max-width: 53.125em) {
+    .reservas-layout {
+        grid-template-columns: 1fr;
+        padding: 1em;
+        gap: 1.5em;
+    }
+
+    .reservas-sidebar {
+        padding: 1em;
+    }
+
+    .acordeon-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8em;
+        padding: 1em;
+    }
+
+    .meta-header {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .ruta-principal {
+        font-size: 0.95em;
+    }
+
+    .monto {
+        font-size: 1.2em;
+    }
+
+    .etiqueta-vuelo {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+@media (max-width: 53.125em) {
+    .reservas-layout {
+        grid-template-columns: 1fr;
+        padding: 1em;
+        gap: 1.5em;
+    }
+
+    .reservas-sidebar {
+        padding: 1em;
+    }
+
+    .acordeon-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8em;
+        padding: 1em;
+    }
+
+    .meta-header {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .ruta-principal {
+        font-size: 0.95em;
+    }
+
+    .monto {
+        font-size: 1.2em;
+    }
+
+    .etiqueta-vuelo {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+@media (max-width: 30em) {
+    .reservas-layout {
+        padding: 0.5em;
+    }
+
+    .info-header {
+        font-size: 0.85em;
+    }
+
+    .precio-badge {
+        padding: 0.2em 0.5em;
+        font-size: 0.8em;
+    }
+}

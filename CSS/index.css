@@ -10,21 +10,29 @@
 }
 
 .section-vuelo {
-    padding: 2em;
+    padding: 2em; /*Espacio interno*/
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /*cómo se calcula el tamaño total de un elemento.*/
+}
+.etiqueta-vuelo {
+    border-radius: 0.25em 0.25em 0 0;
+    background-color: rgb(119, 126, 125);
+    color: white;
+    max-width: fit-content;
+    padding: 0.25em;
 }
 
 .form {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5em;
+    gap: 1em;
     justify-content: center;
     background-color: var(--color-primario-light);
-    padding: 1em;
+    padding: 1.2em;
     border-radius: 0.8em;
     width: 100%;
     max-width: 90em;
@@ -39,6 +47,7 @@
 }
 
 .form-group label {
+    display: flex;
     color: var(--color-blanco);
     font-weight: bold;
     font-size: 0.9em;
@@ -85,7 +94,6 @@
 
 .aceptar:hover, .reset:hover {
     filter: brightness(1.1);
-    transform: translateY(-0.125em);
 }
 
 .destinos-favoritos {

@@ -1,18 +1,10 @@
+
 .etiqueta-vuelo {
     border-radius: 0.25em 0.25em 0 0;
     background-color: rgb(119, 126, 125);
     color: white;
     max-width: fit-content;
     padding: 0.25em;
-}
-
-.section-vuelo {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-    max-width: 100vw;
 }
 
 .form {
@@ -262,7 +254,7 @@ fieldset {
     margin-left: 1em;
 }
 
-input #mes-anio{
+input #mes-anio {
     width: min-content;
 }
 
@@ -274,146 +266,147 @@ input[type="number"] {
     border: 1px solid #ccc;
 
 
-/* *********************************************************************
+    /* *********************************************************************
 RESPONSIVE DESIGN
 ********************************************************************* */
 
-@media (max-width: 768px) {
-    .grilla-resultados {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        margin: 1em;
-        padding: 1em;
+    @media (max-width: 768px) {
+        .grilla-resultados {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        .datos-de-vuelos {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "compania"
+                "ida"
+                "salida"
+                "llegada"
+                "vuelta"
+                "precio-base"
+                "precio-amigo";
+            height: auto;
+            margin: 1em 0;
+        }
+
+        header {
+            flex-direction: column;
+            height: auto;
+            padding: 1em;
+        }
+
+        .menu {
+            flex-direction: column;
+            gap: 1em;
+            height: auto;
+        }
+
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .destinos-favoritos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 3em;
+            padding: 1em;
+            color: white;
+            background-color: #5b8787;
+            align-items: center;
+            width: 100%;
+            max-width: 100vw;
+            border-radius: 0.50em;
+        }
+
+        .seccion-vacaciones {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 100vw;
+            height: auto;
+            width: auto;
+            gap: 1em;
+        }
+
+        .seccion-vacaciones img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0 0 0.50em 0.50em;
+            height: 30em;
+            opacity: 0.8;
+        }
     }
 
-    .datos-de-vuelos {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "compania"
-            "ida"
-            "salida"
-            "llegada"
-            "vuelta"
-            "precio-base"
-            "precio-amigo";
-        height: auto;
-        margin: 1em 0;
-    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .grilla-resultados {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            margin: 1.5em;
+            padding: 1.5em;
+        }
 
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 1em;
-    }
+        .datos-de-vuelos {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "compania compania"
+                "ida ida"
+                "salida llegada"
+                "vuelta vuelta"
+                "precio-base precio-amigo";
+            height: auto;
+        }
 
-    .menu {
-        flex-direction: column;
-        gap: 1em;
-        height: auto;
-    }
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
 
-    .logo img {
-        max-width: 150px;
-        height: auto;
-    }
+        .destinos-favoritos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 3em;
+            padding: 1em;
+            color: white;
+            background-color: #5b8787;
+            align-items: center;
+            width: 100%;
+            max-width: 100vw;
+            border-radius: 0.50em;
+        }
 
-    .destinos-favoritos {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 3em;
-        padding: 1em;
-        color: white;
-        background-color: #5b8787;
-        align-items: center;
-        width: 100%;
-        max-width: 100vw;
-        border-radius: 0.50em;
-    }
+        .seccion-vacaciones {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 100vw;
+            height: auto;
+            width: auto;
+            gap: 1em;
+        }
 
-    .seccion-vacaciones {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 100vw;
-        height: auto;
-        width: auto;
-        gap: 1em;
-    }
+        .seccion-vacaciones img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0 0 0.50em 0.50em;
+            height: 30em;
+            opacity: 0.8;
+        }
 
-    .seccion-vacaciones img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 0 0 0.50em 0.50em;
-        height: 30em;
-        opacity: 0.8;
     }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .grilla-resultados {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        margin: 1.5em;
-        padding: 1.5em;
-    }
-
-    .datos-de-vuelos {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "compania compania"
-            "ida ida"
-            "salida llegada"
-            "vuelta vuelta"
-            "precio-base precio-amigo";
-        height: auto;
-    }
-
-    .logo img {
-        max-width: 200px;
-        height: auto;
-    }
-
-    .destinos-favoritos {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 3em;
-        padding: 1em;
-        color: white;
-        background-color: #5b8787;
-        align-items: center;
-        width: 100%;
-        max-width: 100vw;
-        border-radius: 0.50em;
-    }
-
-    .seccion-vacaciones {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 100vw;
-        height: auto;
-        width: auto;
-        gap: 1em;
-    }
-
-    .seccion-vacaciones img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 0 0 0.50em 0.50em;
-        height: 30em;
-        opacity: 0.8;
-    }
-
 }

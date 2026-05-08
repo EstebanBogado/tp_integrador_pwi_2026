@@ -58,3 +58,20 @@ label {
 input {
     margin-right: 1em;
 }
+
+.contenedor-medio-de-pago {
+    display: flex;
+}
+
+.tarjeta,
+.transferencia {
+    display: none;
+}
+
+#credito:checked~.tarjeta {
+    display: block;
+}
+
+#transferencia:checked~.transferencia {
+    display: block;
+}

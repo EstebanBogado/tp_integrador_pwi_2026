@@ -53,12 +53,14 @@ input {
     margin: 1em;
 }
 
+
 .asiento {
     border-style: solid;
     border-color: rgb(231, 185, 101);
     margin: 2em;
     padding: 2.50em;
     border-radius: 0.875em 0.875em 0 0;
+    font-weight: bold;
 }
 
 .asiento-ocupado {
@@ -69,11 +71,14 @@ input {
     padding: 2.50em;
     border-radius: 0.875em 0.875em 0 0;
     align-content: center;
+    color: white;
+    font-weight: bold;
 }
 
 :hover.asiento {
     pointer-events: painted;
     background-color: rgb(231, 185, 101);
+    opacity: 0.25;
 }
 
 .ubicacion-cabina {

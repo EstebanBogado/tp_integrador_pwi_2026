@@ -50,12 +50,12 @@
 
                 <div class="form-row form-tipo">
                     <label class="radio-label">
-                        <input type="radio" name="tipo-viaje" value="ida-vuelta" checked>
+                        <input type="radio" required name="tipo-viaje" value="ida-vuelta">
                         Ida y vuelta
                     </label>
                     <label class="radio-label">
-                        <input type="radio" name="tipo-viaje" value="solo-ida">
-                        Solo ida
+                        <input type="radio" required name="tipo-viaje" value="solo-ida">
+                        Sólo ida
                     </label>
                 </div>
 
@@ -63,8 +63,8 @@
                     <label for="desde">
                         <i class="fa-solid fa-plane-departure"></i> Origen
                     </label>
-                    <select name="desde" id="desde" class="campos-form">
-                        <option value="">Seleccionar origen</option>
+                    <select name="desde" id="desde" class="campos-form" required>
+                        <option value="" disabled selected>Seleccionar origen</option>
                         <option value="BUE">Ezeiza, Buenos Aires (EZE)</option>
                         <option value="AEP">Aeroparque, CABA (AEP)</option>
                         <option value="BRC">Bariloche, Río Negro (BRC)</option>
@@ -76,8 +76,8 @@
                     <label for="destino">
                         <i class="fa-solid fa-plane-arrival"></i> Destino
                     </label>
-                    <select name="destino" id="destino" class="campos-form">
-                        <option value="">Seleccionar destino</option>
+                    <select name="destino" id="destino" class="campos-form" required>
+                        <option value="" disabled selected>Seleccionar destino</option>
                         <option value="MAD">Madrid (MAD)</option>
                         <option value="MIA">Miami (MIA)</option>
                         <option value="LIM">Lima (LIM)</option>
@@ -89,21 +89,22 @@
                     <label for="fecha-salida">
                         <i class="fa-regular fa-calendar"></i> Fecha Ida
                     </label>
-                    <input type="date" name="fecha-salida" id="fecha-salida" class="campos-form">
+                    <input type="date" name="fecha-salida" id="fecha-salida" class="campos-form" required>
                 </div>
 
                 <div class="form-group">
                     <label for="fecha-vuelta">
                         <i class="fa-regular fa-calendar"></i> Fecha Vuelta
                     </label>
-                    <input type="date" name="fecha-vuelta" id="fecha-vuelta" class="campos-form">
+                    <input type="date" name="fecha-vuelta" id="fecha-vuelta" class="campos-form" required>
                 </div>
 
                 <div class="form-group">
                     <label for="pasajeros">
                         <i class="fa-solid fa-user"></i> Pasajeros
                     </label>
-                    <select name="pasajeros" id="pasajeros" class="campos-form">
+                    <select name="pasajeros" id="pasajeros" class="campos-form" required>
+                        <option value="" disabled selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -115,7 +116,8 @@
                     <label for="clase">
                         <i class="fa-solid fa-chair"></i> Clase
                     </label>
-                    <select name="clase" id="clase" class="campos-form">
+                    <select name="clase" id="clase" class="campos-form" required>
+                        <option value="" disabled selected></option>
                         <option value="economica">Económica</option>
                         <option value="ejecutiva">Ejecutiva</option>
                         <option value="primera">Primera</option>
@@ -128,7 +130,7 @@
                 </div>
             </form>
         </section>
-        
+
         <section class="destinos-favoritos">
             <h1>NUESTROS DESTINOS MÁS ELEGIDOS</h1>
         </section>

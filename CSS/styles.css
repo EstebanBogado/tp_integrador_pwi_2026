@@ -10,96 +10,98 @@
     --color-aceptar-dark: rgb(105, 155, 72);
     --color-reset: rgb(185, 111, 93);
     --color-reset-dark: rgb(155, 85, 68);
-}
-* {
-    margin: 0;
-}
+    --color-asiento-pasajero: rgb(231, 185, 101);
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
+    * {
+        margin: 0;
+    }
 
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 0;
-    height: 100vh;
-    min-height: 100vh;
-    width: 100%;
-    font-family: 'Courier New', Courier, monospace;
-}
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
 
-header {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    justify-content: space-around;
-    color: white;
-    background-color: #5b8787;
-    padding: 0 2em;
-    height: 5em;
-}
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        font-family: 'Courier New', Courier, monospace;
+    }
 
-nav {
-    display: flex;
-    justify-content: center;
-}
+    header {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-around;
+        color: white;
+        background-color: #5b8787;
+        padding: 0 2em;
+        height: 5em;
+    }
 
-.menu {
-    display: flex;
-    gap: 2em;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1em;
-    height: 3em;
-}
+    nav {
+        display: flex;
+        justify-content: center;
+    }
 
-.logo {
-    display: flex;
-    align-items: center;
-    max-height: 100%;
-    height: auto;
-    width: auto;
+    .menu {
+        display: flex;
+        gap: 2em;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em;
+        height: 3em;
+    }
 
-}
+    .logo {
+        display: flex;
+        align-items: center;
+        max-height: 100%;
+        height: auto;
+        width: auto;
 
-a {
-    color: white;
-    text-decoration: none;
-}
+    }
 
-fieldset {
-    border: none;
-    margin-bottom: 1.5em;
-}
+    a {
+        color: white;
+        text-decoration: none;
+    }
 
-main {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    min-height: calc(100vh -5em -5em);
-    padding: 2em;
-    background-image: url(../IMG/avion-despegando.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgb(185, 191, 190);
-    color: rgb(94, 93, 93);
-}
+    fieldset {
+        border: none;
+        margin-bottom: 1.5em;
+    }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 5em;
-    color: white;
-    background-color: #5b8787;
-    font-family: Arial, Helvetica, sans-serif;
-    flex-shrink: 0; /*factor de contracción de un elemento*/
-}
+    main {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        min-height: calc(100vh -5em -5em);
+        padding: 2em;
+        background-image: url(../IMG/avion-despegando.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgb(185, 191, 190);
+        color: rgb(94, 93, 93);
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 5em;
+        color: white;
+        background-color: #5b8787;
+        font-family: Arial, Helvetica, sans-serif;
+        flex-shrink: 0;
+        /*factor de contracción de un elemento*/
+    }

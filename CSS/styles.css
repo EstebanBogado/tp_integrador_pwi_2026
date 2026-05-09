@@ -95,6 +95,7 @@
 
     footer {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -103,5 +104,5 @@
         background-color: #5b8787;
         font-family: Arial, Helvetica, sans-serif;
         flex-shrink: 0;
-        /*factor de contracción de un elemento*/
+        gap: 2em;
     }

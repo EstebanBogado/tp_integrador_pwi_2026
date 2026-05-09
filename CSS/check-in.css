@@ -73,6 +73,19 @@ input {
 #credito:checked~.tarjeta {
     display: block;
 }
+#credito{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 1em;
+}
+
+#transferencia{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 1em;
+}
 
 #transferencia:checked~.transferencia {
     display: block;

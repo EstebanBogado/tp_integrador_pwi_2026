@@ -61,6 +61,8 @@ input {
 
 .contenedor-medio-de-pago {
     display: flex;
+    flex-direction: column;
+    margin: 2em;
 }
 
 .tarjeta,
@@ -74,4 +76,12 @@ input {
 
 #transferencia:checked~.transferencia {
     display: block;
+}
+
+.ir-al-check-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1em;
 }

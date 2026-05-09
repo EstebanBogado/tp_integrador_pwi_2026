@@ -36,7 +36,7 @@
     <p>Seleccione el medio de pago</p>
 
     <section class="formulario-checkin">
-      <form>
+      <form method="post">
         <fieldset>
           <legend class="titulo">Datos del vuelo</legend>
           <label>Código de reserva:</label>
@@ -54,17 +54,17 @@
           <legend class="titulo">Medio de pago</legend>
           <!-- ***************************************************** -->
           <div class="contenedor-medio-de-pago">
-            <input type="radio" id="credito" name="medio-de-pago" required>
             <label for="credito">Tarjeta de crédito</label>
-            <input type="radio" id="transferencia" name="medio-de-pago" required>
+            <input type="radio" id="credito" name="medio-de-pago" required>
             <label for="transferencia">Transferencia bancaria</label>
+            <input type="radio" id="transferencia" name="medio-de-pago" required>
             <div class="tarjeta">
               <label for="">Nro. de tarjeta
                 <input type="number" name="nro-de-tarjeta" id="" required>
               </label>
               <fieldset>
                 <label for="mes-anio">Vencimiento (MM/YYYY):
-                  <input type="text" id="mes-anio" name="mes-anio" pattern="\d{2}/\d{4}" placeholder="MM/YYYY" required>
+                  <input type="date" id="mes-anio" name="mes-anio" pattern="\d{2}/\d{4}" placeholder="MM/YYYY" required>
                 </label>
                 <label for="cvv" id="cvv">CVV:
                   <input type="number" maxlength="3" placeholder="***" required>
@@ -101,16 +101,19 @@
           </div>
           <!-- ************************************************************** -->
           <div class="botones">
-            <a href="../PAGES/check-in.html">
-              <input type="submit" name="" id="" value="Confirmar el pago" class="confirmar">
-            </a>
-            <!--           <a href="../PAGES/check-in.html"><button class="confirmar">
-              <p>Confirmar pago</p>
-            </button></a> -->
+            <input type="submit" name="" id="" value="Confirmar el pago" class="confirmar">
+
             <button class="cancelar" type="reset">Cancelar</button>
           </div>
+
       </form>
+
     </section>
+    <div class="etiqueta-vuelo ir-al-check-in">
+      <a href="../PAGES/check-in.html">
+        <h3>Ir al check-in online</h3>
+      </a>
+    </div>
   </main>
 
   <footer>

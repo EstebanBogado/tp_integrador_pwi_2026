@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar / Registrarse</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/etiquetas.css">
+    <link rel="stylesheet" href="../CSS/ingresar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <a href="../index.html" class="logo">
+                <img src="../IMG/logo-aero-viajes.jpg" width="300px" height="200px" alt="logo aero viajes">
+            </a>
+            <a href="../index.html">
+                <p>inicio</p>
+            </a>
+            <a href="../PAGES/resultado busqueda.html">
+                <p>vuelos</p>
+            </a>
+            <a href="">
+                <p>Ofertas</p>
+            </a>
+            <a href="">
+                <p>Contacto</p>
+            </a>
+            <p>ingresar/registrarse</p>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+
+            <!-- Tabs -->
+            <div class="auth-tabs">
+                <input type="radio" name="auth-tab" id="tab-login" class="tab-check" checked>
+                <input type="radio" name="auth-tab" id="tab-registro" class="tab-check">
+
+                <div class="tabs-header">
+                    <label for="tab-login" class="tab-label">
+                        <i class="fa-solid fa-right-to-bracket"></i> Ingresar
+                    </label>
+                    <label for="tab-registro" class="tab-label">
+                        <i class="fa-solid fa-user-plus"></i> Registrarse
+                    </label>
+                </div>
+
+                <!-- Panel Login -->
+                <div class="tab-panel panel-login">
+                    <p class="etiqueta-vuelo">
+                        <i class="fa-solid fa-lock"></i> Acceso a tu cuenta
+                    </p>
+                    <form action="" method="post" class="form-auth">
+                        <div class="form-group">
+                            <label for="email-login">
+                                <i class="fa-regular fa-envelope"></i> Correo electrónico
+                            </label>
+                            <input type="email" id="email-login" name="email" class="campos-form"
+                                placeholder="tu@correo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-login">
+                                <i class="fa-solid fa-key"></i> Contraseña
+                            </label>
+                            <input type="password" id="password-login" name="password" class="campos-form"
+                                placeholder="••••••••" required>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="submit" value="INGRESAR" class="aceptar">
+                            <input type="reset" value="LIMPIAR" class="reset">
+                        </div>
+
+                        <div class="auth-footer-link">
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Panel Registro -->
+                <div class="tab-panel panel-registro">
+                    <p class="etiqueta-vuelo">
+                        <i class="fa-solid fa-user-plus"></i> Crear cuenta
+                    </p>
+                    <form action="" method="post" class="form-auth">
+                        <div class="form-row-doble">
+                            <div class="form-group">
+                                <label for="nombre">
+                                    <i class="fa-regular fa-user"></i> Nombre
+                                </label>
+                                <input type="text" id="nombre" name="nombre" class="campos-form" placeholder="Tu nombre"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido">
+                                    <i class="fa-regular fa-user"></i> Apellido
+                                </label>
+                                <input type="text" id="apellido" name="apellido" class="campos-form" placeholder="Tu Apellido"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-registro">
+                                <i class="fa-regular fa-envelope"></i> Correo electrónico
+                            </label>
+                            <input type="email" id="email-registro" name="email" class="campos-form"
+                                placeholder="tu@correo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dni">
+                                <i class="fa-solid fa-id-card"></i> DNI / Pasaporte
+                            </label>
+                            <input type="text" id="dni" name="dni" class="campos-form" placeholder="12345678" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-registro">
+                                <i class="fa-solid fa-key"></i> Contraseña
+                            </label>
+                            <input type="password" id="password-registro" name="password" class="campos-form"
+                                placeholder="••••••••" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm">
+                                <i class="fa-solid fa-key"></i> Confirmar contraseña
+                            </label>
+                            <input type="password" id="password-confirm" name="password-confirm" class="campos-form"
+                                placeholder="••••••••" required>
+                        </div>
+
+                        <div class="form-group form-terminos">
+                            <label class="radio-label">
+                                <input type="checkbox" name="terminos" required>
+                                Acepto los términos y condiciones
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="submit" value="REGISTRARSE" class="aceptar">
+                            <input type="reset" value="LIMPIAR" class="reset">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Todos los derechos reservados 2026.</p>
+    </footer>
+</body>
+
+</html>

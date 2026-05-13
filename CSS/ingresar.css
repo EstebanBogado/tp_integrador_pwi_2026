@@ -1,0 +1,234 @@
+main {
+    background-image: none !important;
+    background-image: url(/IMG/ingresar.png) !important;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 40em;
+    margin: 2em auto;
+}
+
+.tab-check {
+    display: none;
+    /* checkboxes invisibles */
+}
+
+.tabs-header {
+    display: flex;
+    border-radius: 0.5em 0.5em 0 0;
+    overflow: hidden;
+}
+
+.tab-label {
+    flex: 1;
+    text-align: center;
+    padding: 0.9em;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--color-primario-dark);
+    color: rgba(255, 255, 255, 0.6);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tab-label:hover {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+/* Tab activo: cuando su radio está checked, iluminar el label correspondiente */
+#tab-login:checked~.tabs-header label[for="tab-login"],
+#tab-registro:checked~.tabs-header label[for="tab-registro"] {
+    background-color: var(--color-primario-light);
+    color: white;
+}
+
+/* Paneles: por defecto ocultos */
+.tab-panel {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 0 0 0.5em 0.5em;
+    padding: 2em;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+/* Mostrar panel según tab activo */
+#tab-login:checked~.panel-login,
+#tab-registro:checked~.panel-registro {
+    display: block;
+}
+
+/* ── Formulario interno ── */
+
+.form-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    margin-top: 1em;
+}
+
+.form-auth .form-group label {
+    color: var(--color-primario-dark);
+    /* oscuro sobre fondo blanco */
+    font-weight: bold;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-bottom: 0.3em;
+}
+
+.form-auth .campos-form {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.6em 0.8em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.4em;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--color-texto);
+    transition: border-color 0.2s;
+}
+
+.form-auth .campos-form:focus {
+    outline: none;
+    border-color: var(--color-primario);
+}
+
+/* Fila doble (nombre + apellido) */
+.form-row-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+/* Checkbox de términos */
+.form-terminos label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.9em;
+    color: var(--color-texto);
+    cursor: pointer;
+}
+
+.form-terminos input[type="checkbox"] {
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+    accent-color: var(--color-primario);
+}
+
+.form-auth .form-actions {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+.form-auth .aceptar,
+.form-auth .reset {
+    padding: 0.75em 2em;
+    border-radius: 0.4em;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    transition: filter 0.2s, transform 0.2s;
+    color: white;
+}
+
+.form-auth .aceptar {
+    background-color: var(--color-aceptar);
+}
+
+.form-auth .reset {
+    background-color: var(--color-reset);
+}
+
+.form-auth .aceptar:hover,
+.form-auth .reset:hover {
+    filter: brightness(1.1);
+    transform: translateY(-0.1em);
+}
+
+.auth-footer-link {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.auth-footer-link a {
+    color: var(--color-primario);
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.auth-footer-link a:hover {
+    color: var(--color-primario-dark);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 48em) {
+ 
+    header {
+        height: auto !important;
+        padding: 0.5em 0.5em !important;
+    }
+ 
+    .menu {
+        flex-wrap: wrap;
+        height: auto !important;
+        gap: 0.5em;
+        justify-content: center;
+        padding: 0.5em;
+    }
+ 
+    .logo img {
+        width: auto!important;
+        height: auto !important;
+    }
+    .auth-container {
+        margin: 0.8em;
+        max-width: 100%;
+    }
+    .tab-label {
+        font-size: 0.8em;
+        padding: 0.7em 0.5em;
+        gap: 0.3em;
+    }
+    .tab-panel {
+        padding: 1em;
+        border-radius: 0 0 0.4em 0.4em;
+    }
+ 
+    /* Fila doble pasa a una columna */
+    .form-row-doble {
+        grid-template-columns: 1fr;
+    }
+ 
+    /* Botones ocupan todo el ancho y van en columna */
+    .form-auth .form-actions {
+        flex-direction: column;
+        gap: 0.8em;
+    }
+ 
+    .form-auth .aceptar,
+    .form-auth .reset {
+        width: 100%;
+        text-align: center;
+    }
+    footer {
+        height: auto !important;
+        padding: 1em;
+        text-align: center;
+    }
+}

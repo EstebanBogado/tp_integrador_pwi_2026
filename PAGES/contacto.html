@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Aero Viajes</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/etiquetas.css">
+    <link rel="stylesheet" href="../CSS/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+ 
+<body>
+    <header>
+        <nav class="menu">
+            <a href="../index.html" class="logo">
+                <img src="../IMG/logo-aero-viajes.jpg" width="300px" height="200px" alt="logo aero viajes">
+            </a>
+            <a href="../index.html"><p>inicio</p></a>
+            <a href="../PAGES/resultado busqueda.html"><p>vuelos</p></a>
+            <a href=""><p>Ofertas</p></a>
+            <a href=""><p>Contacto</p></a>
+            <a href="/PAGES/ingresar.html"><p>ingresar/registrarse</p></a>
+        </nav>
+    </header>
+ 
+    <main>
+        <div class="contacto-wrapper">
+ 
+            <!-- Columna izquierda -->
+            <aside class="contacto-info">
+                <p class="etiqueta-vuelo">
+                    <i class="fa-solid fa-headset"></i> Atención al cliente
+                </p>
+ 
+                <div class="info-bloque">
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <p class="info-titulo">Teléfono</p>
+                            <p class="info-dato">+54 11 4000-0000</p>
+                            <p class="info-dato">+54 11 4000-0001</p>
+                        </div>
+                    </div>
+ 
+                    <div class="info-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div>
+                            <p class="info-titulo">Correo</p>
+                            <p class="info-dato">contacto@aeroviajes.com</p>
+                            <p class="info-dato">soporte@aeroviajes.com</p>
+                        </div>
+                    </div>
+ 
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <p class="info-titulo">Dirección</p>
+                            <p class="info-dato">Av. Corrientes 1234</p>
+                            <p class="info-dato">Buenos Aires, Argentina</p>
+                        </div>
+                    </div>
+ 
+                    <div class="info-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <p class="info-titulo">Horario de atención</p>
+                            <p class="info-dato">Lunes a viernes: 9:00 - 18:00</p>
+                            <p class="info-dato">Sábados: 9:00 - 13:00</p>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Redes sociales -->
+                <div class="redes">
+                    <p class="info-titulo">Seguinos en redes</p>
+                    <div class="redes-iconos">
+                        <a href="" class="red-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="red-link"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="" class="red-link"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="" class="red-link"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </aside>
+ 
+            <!-- formulario -->
+            <section class="contacto-form-wrapper">
+                <p class="etiqueta-vuelo">
+                    <i class="fa-regular fa-paper-plane"></i> Envianos tu consulta
+                </p>
+ 
+                <form action="" method="post" class="form-contacto">
+ 
+                    <div class="form-row-doble">
+                        <div class="form-group">
+                            <label for="nombre">
+                                <i class="fa-regular fa-user"></i> Nombre
+                            </label>
+                            <input type="text" id="nombre" name="nombre" class="campos-form" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">
+                                <i class="fa-regular fa-user"></i> Apellido
+                            </label>
+                            <input type="text" id="apellido" name="apellido" class="campos-form" placeholder="Tu Apellido" required>
+                        </div>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fa-regular fa-envelope"></i> Correo electrónico
+                        </label>
+                        <input type="email" id="email" name="email" class="campos-form" placeholder="tu@correo.com" required>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="telefono">
+                            <i class="fa-solid fa-phone"></i> Teléfono (opcional)
+                        </label>
+                        <input type="tel" id="telefono" name="telefono" class="campos-form">
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="motivo">
+                            <i class="fa-solid fa-tag"></i> Motivo de contacto
+                        </label>
+                        <select id="motivo" name="motivo" class="campos-form" required>
+                            <option value="" disabled selected>Seleccioná una opción</option>
+                            <option value="reserva">Consulta sobre reserva</option>
+                            <option value="cancelacion">Cancelación de vuelo</option>
+                            <option value="checkin">Check-in online</option>
+                            <option value="equipaje">Equipaje</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="mensaje">
+                            <i class="fa-regular fa-message"></i> Mensaje
+                        </label>
+                        <textarea id="mensaje" name="mensaje" class="campos-form textarea" placeholder="Escribí tu consulta acá..." rows="5" required></textarea>
+                    </div>
+ 
+                    <div class="form-group form-terminos">
+                        <label class="radio-label">
+                            <input type="checkbox" name="terminos" required>
+                            Acepto la política de privacidad y el tratamiento de mis datos
+                        </label>
+                    </div>
+ 
+                    <div class="form-actions">
+                        <input type="submit" value="ENVIAR MENSAJE" class="aceptar">
+                        <input type="reset" value="LIMPIAR" class="reset">
+                    </div>
+ 
+                </form>
+            </section>
+ 
+        </div>
+    </main>
+ 
+    <footer>
+        <p>&copy; Todos los derechos reservados 2026.</p>
+    </footer>
+</body>
+ 
+</html>

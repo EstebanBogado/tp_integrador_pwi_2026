@@ -1,6 +1,9 @@
 .armado-del-vuelo {
     display: grid;
-    grid-template-columns: 2fr 0.50fr 2fr 0.50fr 2fr;
+    padding: 2em;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 3em;
+    justify-content: center;
     width: auto;
     max-width: 100%;
     margin: 1em;
@@ -9,6 +12,21 @@
     border-radius: 0.75em;
     border-style: solid;
 }
+
+.asientos-cabina {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 2em;
+    gap: 1em;
+}
+
+.separacion-asientos {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
 
 .secciones-cabina {
     display: grid;
@@ -33,6 +51,34 @@ input {
     max-width: fit-content;
     padding: 1em;
     margin: 1em;
+}
+
+
+.asiento {
+    border-style: solid;
+    border-color: rgb(231, 185, 101);
+    margin: 2em;
+    padding: 2.50em;
+    border-radius: 0.875em 0.875em 0 0;
+    font-weight: bold;
+}
+
+.asiento-ocupado {
+    border-style: solid;
+    border-color: rgb(231, 185, 101);
+    background-color: rgb(90, 128, 235);
+    margin: 2em;
+    padding: 2.50em;
+    border-radius: 0.875em 0.875em 0 0;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+:hover.asiento {
+    pointer-events: painted;
+    background-color: rgb(231, 185, 101);
+    opacity: 0.25;
 }
 
 .ubicacion-cabina {

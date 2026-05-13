@@ -1,0 +1,258 @@
+.contacto-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    width: 100%;
+    max-width: 70em;
+    margin: 2em auto;
+    align-items: start;
+}
+
+/* ── Columna izquierda: info ── */
+
+.contacto-info {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 0.5em;
+    padding: 1.5em;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.12);
+}
+
+.info-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.info-item i {
+    font-size: 1.3em;
+    color: var(--color-primario);
+    margin-top: 0.15em;
+    min-width: 1.3em;
+    text-align: center;
+}
+
+.info-titulo {
+    font-weight: bold;
+    color: var(--color-primario-dark);
+    font-size: 0.85em;
+    margin-bottom: 0.2em;
+}
+
+.info-dato {
+    color: var(--color-texto);
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Redes sociales */
+
+.redes {
+    border-top: 0.0625em solid #ddd;
+    padding-top: 1.2em;
+}
+
+.redes-iconos {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 0.6em;
+}
+
+.red-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 50%;
+    background-color: var(--color-primario);
+    color: white !important;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.red-link:hover {
+    background-color: var(--color-primario-dark);
+    transform: translateY(-0.15em);
+}
+
+/* ── Columna derecha: formulario ── */
+
+.contacto-form-wrapper {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 0.5em;
+    padding: 1.5em 2em;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.12);
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    margin-top: 1em;
+}
+
+/* Reutiliza .form-group de etiquetas/index */
+.form-contacto .form-group label {
+    color: var(--color-primario-dark);
+    font-weight: bold;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-bottom: 0.3em;
+}
+
+.form-contacto .campos-form {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.6em 0.8em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.4em;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--color-texto);
+    transition: border-color 0.2s;
+}
+
+.form-contacto .campos-form:focus {
+    outline: none;
+    border-color: var(--color-primario);
+}
+
+/* Textarea */
+.textarea {
+    resize: vertical;
+    min-height: 7em;
+}
+
+/* Fila doble nombre + apellido */
+.form-row-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+/* Checkbox términos */
+.form-terminos label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.9em;
+    color: var(--color-texto);
+    cursor: pointer;
+}
+
+.form-terminos input[type="checkbox"] {
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+    accent-color: var(--color-primario);
+}
+
+/* Botones */
+.form-contacto .form-actions {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+.form-contacto .aceptar,
+.form-contacto .reset {
+    padding: 0.75em 2em;
+    border-radius: 0.4em;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    transition: filter 0.2s, transform 0.2s;
+    color: white;
+}
+
+.form-contacto .aceptar {
+    background-color: var(--color-aceptar);
+}
+
+.form-contacto .reset {
+    background-color: var(--color-reset);
+}
+
+.form-contacto .aceptar:hover,
+.form-contacto .reset:hover {
+    filter: brightness(1.1);
+    transform: translateY(-0.1em);
+}
+
+@media (min-width: 48.0625em) and (max-width: 64em) {
+    .contacto-wrapper {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 1.5em;
+        margin: 1.5em;
+    }
+}
+
+@media (max-width: 48em) {
+
+    header {
+        height: auto !important;
+        padding: 0.5em 1em !important;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        height: auto !important;
+        gap: 0.5em;
+        justify-content: center;
+        padding: 0.5em;
+    }
+
+    .logo img {
+        width: 7.5em !important;
+        height: auto !important;
+    }
+
+    .contacto-wrapper {
+        grid-template-columns: 1fr;
+        margin: 0.8em;
+        gap: 1em;
+    }
+
+    .form-row-doble {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-info,
+    .contacto-form-wrapper {
+        padding: 1em;
+    }
+
+    .form-contacto .form-actions {
+        flex-direction: column;
+        gap: 0.8em;
+    }
+
+    .form-contacto .aceptar,
+    .form-contacto .reset {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        height: auto !important;
+        padding: 1em;
+        text-align: center;
+    }
+}

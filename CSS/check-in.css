@@ -13,6 +13,10 @@ input[type="text"] {
     border-radius: 0.25em;
     border: 1px solid #ccc;
 }
+input[type="checkbox"] {
+    margin-right: 0.75em;
+    margin-left: 2em;
+}
 
 .botones {
     display: flex;
@@ -57,4 +61,44 @@ label {
 
 input {
     margin-right: 1em;
+}
+
+.contenedor-medio-de-pago {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+
+.tarjeta,
+.transferencia {
+    display: none;
+}
+
+#credito:checked~.tarjeta {
+    display: block;
+}
+#credito{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 1em;
+}
+
+#transferencia{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 1em;
+}
+
+#transferencia:checked~.transferencia {
+    display: block;
+}
+
+.ir-al-check-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1em;
 }

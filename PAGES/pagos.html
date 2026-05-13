@@ -33,19 +33,16 @@
 
   <main>
     <h1>Pago Online</h1>
-    <p>Complete su check-in rápido y sencillo</p>
+    <p>Seleccione el medio de pago</p>
 
     <section class="formulario-checkin">
-      <form>
+      <form method="post">
         <fieldset>
           <legend class="titulo">Datos del vuelo</legend>
           <label>Código de reserva:</label>
-          <input type="text" name="codigo">
+          <input type="text" name="codigo" required>
           <button class="buscar-reserva">Buscar reserva</button>
-
-
         </fieldset>
-
         <!--  <fieldset>
           <legend class="titulo">Datos del pasajero</legend>
           <label>Apellido:</label>
@@ -53,47 +50,71 @@
           <label>Nombre:</label>
           <input type="text" name="nombre">
         </fieldset> -->
-
         <fieldset class="tipo-tarjeta">
-          <legend class="titulo">Datos de la tarjeta</legend>
-          <label>
-            <input type="radio" name="tipo-viaje" value="ida-vuelta" checked>
-            Tarjeta de crédito
-            <input type="radio" name="tipo-viaje" value="solo-ida">
-            Tarjeta de débito
-          </label>
-          <label for="">Nro. de tarjeta
-            <input type="number" name="nro-de-tarjeta" id="">
-          </label>
-          <fieldset>
-            <label for="mes-anio">Vencimiento (MM/YYYY):
-              <input type="text" id="mes-anio" name="mes-anio" pattern="\d{2}/\d{4}" placeholder="MM/YYYY" required>
-            </label>
-            <label for="cvv" id="cvv">CVV:
-              <input type="number" maxlength="3" placeholder="***" required>
-            </label>
-          </fieldset>
-          <label for="titular">Nombre y Apellido del titular
-            <input type="text" name="titular" id="">
-          </label>
-          <label for=""></label>
-        </fieldset>
-        <fieldset>
-          <label>Documento / Pasaporte:</label>
-          <input type="text" name="documento">
-        </fieldset>
-        <div class="botones">
-          <a href="../PAGES/check-in.html">
-            <p class="confirmar">Confirmmar pago</p>
-          </a>
+          <legend class="titulo">Medio de pago</legend>
+          <!-- ***************************************************** -->
+          <div class="contenedor-medio-de-pago">
+            
+            <label for="credito">Tarjeta de crédito</label>
+            <input type="radio" id="credito" name="medio-de-pago" required>
+            <label for="transferencia">Transferencia bancaria</label>
+            <input type="radio" id="transferencia" name="medio-de-pago" required>
+            <div class="tarjeta">
+              <label for="">Nro. de tarjeta
+                <input type="number" name="nro-de-tarjeta" id="" required>
+              </label>
+              <fieldset>
+                <label for="mes-anio">Vencimiento (MM/YYYY):
+                  <input type="date" id="mes-anio" name="mes-anio" pattern="\d{2}/\d{4}" placeholder="MM/YYYY" required>
+                </label>
+                <label for="cvv" id="cvv">CVV:
+                  <input type="number" maxlength="3" placeholder="***" required>
+                </label>
+              </fieldset>
+              <label for="titular">Nombre y Apellido del titular
+                <input type="text" name="titular" id="" required>
+              </label>
+              <label for=""></label>
+              <fieldset>
+                <label>Documento / Pasaporte:</label>
+                <input type="text" name="documento" required>
+              </fieldset>
+            </div>
+            <!-- ************************************************************** -->
+            <div class="transferencia">
+              <label for="">Nro. de CBU
+                <input type="number" name="nro-de-cbu" id="" required>
+              </label>
+              <fieldset>
+                <label for="mes-anio">Nro. de Cuenta:
+                  <input type="number" name="nro-de-cuenta" id="" required>
+                </label>
+              </fieldset>
+              <label for="titular">Nombre y Apellido del titular
+                <input type="text" name="titular" id="" required>
+              </label>
+              <label for=""></label>
+              <fieldset>
+                <label>Documento / Pasaporte:</label>
+                <input type="text" name="documento" required>
+              </fieldset>
+            </div>
+          </div>
+          <!-- ************************************************************** -->
+          <div class="botones">
+            <input type="submit" name="" id="" value="Confirmar el pago" class="confirmar">
 
-          <!--           <a href="../PAGES/check-in.html"><button class="confirmar">
-              <p>Confirmar pago</p>
-            </button></a> -->
-          <button class="cancelar">Cancelar</button>
-        </div>
+            <button class="cancelar" type="reset">Cancelar</button>
+          </div>
+
       </form>
+
     </section>
+    <div class="etiqueta-vuelo ir-al-check-in">
+      <a href="../PAGES/check-in.html">
+        <h3>Ir al check-in online</h3>
+      </a>
+    </div>
   </main>
 
   <footer>

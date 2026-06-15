@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Creación del heaer y el footer con js, para modificar un único archivo y que impacte en toda la página
 document.addEventListener("DOMContentLoaded", function () {
-    const header = document.createElement("header");
+    const header = document.createElement("nav");
     header.innerHTML = `
     <nav class="menu">
             <a href="../index.html" class="logo">
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
     document.getElementById("header").appendChild(header);
 
-    const footer = document.createElement("footer");
+    const footer = document.createElement("p");
     footer.innerHTML = `
             <p>&copy; Todos los derechos reservados 2026.</p>
   `;

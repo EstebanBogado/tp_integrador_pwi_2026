@@ -10,44 +10,29 @@
 </head>
 
 <body>
-    <header>
-        <nav class="menu">
-            <a href="../index.html" class="logo"><img src="../IMG/logo-aero-viajes.jpg" width="300px" height="200px"
-                    alt="logo aero viajes"></a>
-            <a href="../index.html">
-                <p>inicio</p>
-            </a>
-            <a href="../PAGES/resultado busqueda.html">
-                <p>vuelos</p>
-            </a>
-            <a href="">
-                <p>Ofertas</p>
-            </a>
-            <a href="">
-                <p>Contacto</p>
-            </a>
-            <p>ingresar/registrarse</p>
-        </nav>
-    </header>
+    <header id="header"></header>
+
     <main>
         <section class="vuelos-disponibles">
-            <aside class="section-vuelo">
+            <aside class="section-vuelo" id="section-vuelo">
                 <p class="etiqueta-vuelo">Vuelos</p>
                 <fieldset>
                     <form action="" class="form-vuelos">
                         <label for="desde">Desde</label>
                         <select name="desde" id="" class="campos-form">
                             <option value=""></option>
-                            <option value="Ezeiza, Buenos Aires">Ezeiza, Buenos Aires</option>
-                            <option value="Aeroparque, CABA">Aeroparque, CABA</option>
-                            <option value="Bariloche, Rio Negro">Bariloche, Rio Negro</option>
+                            <option value="BUE">Ezeiza, Buenos Aires (EZE)</option>
+                            <option value="AEP">Aeroparque, CABA (AEP)</option>
+                            <option value="BRC">Bariloche, Río Negro (BRC)</option>
+                            <option value="COR">Córdoba (COR)</option>
                         </select>
                         <label for="destino">Destino</label>
                         <select name="desde" id="" class="campos-form">
                             <option value=""></option>
-                            <option value="Ezeiza, Buenos Aires">Ezeiza, Buenos Aires</option>
-                            <option value="Aeroparque, CABA">Aeroparque, CABA</option>
-                            <option value="Bariloche, Rio Negro">Bariloche, Rio Negro</option>
+                            <option value="MAD">Madrid (MAD)</option>
+                            <option value="MIA">Miami (MIA)</option>
+                            <option value="LIM">Lima (LIM)</option>
+                            <option value="GRU">São Paulo (GRU)</option>
                         </select>
                         <label for="fecha-salida">Fecha Salida</label>
                         <input type="date" name="fecha-salida" id="" class="campos-form">
@@ -268,9 +253,11 @@
             </section>
         </section>
     </main>
-    <footer>
-        <p>&copy; Todos los derechos reservado 2026</p>
-    </footer>
+
+    <footer id="footer"></footer>
+    <script src="../JS/header-footer.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/resultado_busqueda.js"></script>
 </body>
 
 </html>

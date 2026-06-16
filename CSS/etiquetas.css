@@ -76,8 +76,8 @@ fieldset {
 /*TARJETAS DE VUELO (usado en resultado busqueda.html y detalle vuelo.html)*/
 
 .grilla-resultados {
-    /*  display: grid;
-    grid-template-columns: repeat(3, 1fr); */
+    /*display: grid;
+grid-template-columns: repeat(3, 1fr); */
     display: flex;
     flex-direction: column;
     width: 100%;

@@ -10,14 +10,17 @@
 }
 
 .section-vuelo {
-    padding: 2em; /*Espacio interno*/
+    padding: 2em;
+    /*Espacio interno*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    box-sizing: border-box; /*cómo se calcula el tamaño total de un elemento.*/
+    box-sizing: border-box;
+    /*cómo se calcula el tamaño total de un elemento.*/
 }
+
 .etiqueta-vuelo {
     border-radius: 0.25em 0.25em 0 0;
     background-color: rgb(119, 126, 125);
@@ -72,7 +75,8 @@
     margin-top: 1em;
 }
 
-.aceptar, .reset {
+.aceptar,
+.reset {
     padding: 0.8em 2em;
     border-radius: 0.4em;
     border: none;
@@ -92,7 +96,8 @@
     background-color: var(--color-cancelar);
 }
 
-.aceptar:hover, .reset:hover {
+.aceptar:hover,
+.reset:hover {
     filter: brightness(1.1);
 }
 
@@ -165,7 +170,8 @@
         gap: 1em;
     }
 
-    .aceptar, .reset {
+    .aceptar,
+    .reset {
         width: 100%;
     }
 
@@ -176,6 +182,7 @@
 }
 
 @media (max-width: 48em) {
+
     .destinos-favoritos {
         width: 100%;
         border-radius: 0;

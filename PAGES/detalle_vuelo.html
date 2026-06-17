@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del vuelo</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/etiquetas.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/detalle_vuelo.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <main>
+        <section class="ubicacion-cabina">
+            <div class="datos-de-vuelos" id="detalle-vuelo"></div>
+
+            <div class="resumen-precio" id="resumen-precio"></div>
+
+            <div class="contenedor-opcion-equipaje">
+                <label class="opcion-equipaje">
+                    <input type="checkbox" id="chk-equipaje"> 
+                    Agregar equipaje adicional
+                </label>
+            </div>
+
+            <p class="etiqueta-asientos">Asientos</p>
+
+            <div class="referencia-asientos">
+                <span class="ref-item"><span class="ref-box ref-libre"></span> Disponible</span>
+                <span class="ref-item"><span class="ref-box ref-ocupado"></span> Ocupado</span>
+                <span class="ref-item"><span class="ref-box ref-seleccionado"></span> Seleccionado</span>
+            </div>
+
+            <div class="armado-del-vuelo" id="armado-del-vuelo"></div>
+
+            <button class="etiqueta-confirmar" id="btn-confirmar">Confirmar vuelo</button>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../JS/header-footer.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/detalle_vuelo.js"></script>
+</body>
+</html>

@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado Búsqueda</title>
     <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
     <link rel="stylesheet" type="text/css" href="../CSS/etiquetas.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/resultado-busqueda.css">
 </head>
-
+ 
 <body>
     <header id="header"></header>
-
+ 
     <main>
         <section class="vuelos-disponibles">
+ 
+            <!-- ASIDE: formulario + filtros -->
             <aside class="section-vuelo" id="section-vuelo">
-                <p class="etiqueta-vuelo">Vuelos</p>
+ 
+                <p class="etiqueta-vuelo">Tu búsqueda</p>
                 <fieldset>
                     <form action="" class="form-vuelos">
                         <label for="desde">Desde</label>
-                        <select name="desde" id="" class="campos-form">
+                        <select name="desde" id="desde" class="campos-form">
                             <option value=""></option>
                             <option value="BUE">Ezeiza, Buenos Aires (EZE)</option>
                             <option value="AEP">Aeroparque, CABA (AEP)</option>
@@ -27,7 +31,7 @@
                             <option value="COR">Córdoba (COR)</option>
                         </select>
                         <label for="destino">Destino</label>
-                        <select name="desde" id="" class="campos-form">
+                        <select name="destino" id="destino" class="campos-form">
                             <option value=""></option>
                             <option value="MAD">Madrid (MAD)</option>
                             <option value="MIA">Miami (MIA)</option>
@@ -35,229 +39,78 @@
                             <option value="GRU">São Paulo (GRU)</option>
                         </select>
                         <label for="fecha-salida">Fecha Salida</label>
-                        <input type="date" name="fecha-salida" id="" class="campos-form">
-                        <label for="fecha-salida">Fecha Regreso</label>
-                        <input type="date" name="fecha-salida" id="" class="campos-form">
+                        <input type="date" name="fecha-salida" id="fecha-salida" class="campos-form">
+                        <label for="fecha-vuelta">Fecha Regreso</label>
+                        <input type="date" name="fecha-vuelta" id="fecha-vuelta" class="campos-form">
                     </form>
                 </fieldset>
+ 
+                <!-- FILTROS -->
+                <div class="filtros">
+                    <p class="etiqueta-vuelo">Filtrar por</p>
+ 
+                    <!-- Precio -->
+                    <div class="accordion">
+                        <button class="accordion-header" type="button">Precio ▾</button>
+                        <div class="accordion-body" id="filtro-precio">
+                            <div class="precio-labels">
+                                <span id="label-precio-min">$0</span>
+                                <span id="label-precio-max">$0</span>
+                            </div>
+                            <label for="range-precio-min">Mínimo</label>
+                            <input type="range" id="range-precio-min" class="range-filtro">
+                            <label for="range-precio-max">Máximo</label>
+                            <input type="range" id="range-precio-max" class="range-filtro">
+                        </div>
+                    </div>
+ 
+                    <!-- Tipo de vuelo -->
+                    <div class="accordion">
+                        <button class="accordion-header" type="button">Tipo de vuelo ▾</button>
+                        <div class="accordion-body">
+                            <label class="filtro-label">
+                                <input type="checkbox" name="tipo-vuelo" value="directo"> Directo
+                            </label>
+                            <label class="filtro-label">
+                                <input type="checkbox" name="tipo-vuelo" value="con-escalas"> Con escalas
+                            </label>
+                        </div>
+                    </div>
+ 
+                    <!-- Aerolínea (se genera dinámicamente) -->
+                    <div class="accordion">
+                        <button class="accordion-header" type="button">Aerolínea ▾</button>
+                        <div class="accordion-body" id="filtro-aerolineas">
+                            <!-- JS -->
+                        </div>
+                    </div>
+                    <!-- Equipaje -->
+                    <div class="accordion">
+                        <button class="accordion-header" type="button">Equipaje incluido 🧳 ▾</button>
+                        <div class="accordion-body">
+                            <label class="filtro-label">
+                                <input type="checkbox" id="check-equipaje">
+                                Agregar equipaje en bodega
+                            </label>
+                            <p class="equipaje-info">El costo varía según la aerolínea y se suma al precio del vuelo.</p>
+                        </div>
+                    </div>
+                </div>
+ 
             </aside>
-            <section class="grilla-resultados">
-                <a href="../PAGES/detalle vuelo.html">
-                    <div class="datos-de-vuelos">
-                        <div class="compania aerolinea">
-                            <p>Compañia: Aerolineas Argentinas</p>
-                            <p>|</p>
-                            <p>Nro. de vuelo: 12345678</p>
-                        </div>
-                        <div class="ida">Ida</div>
-                        <div class="salida-llegada">
-                            <h2>Salida</h2>
-                            <p class="horario">10:50 a.m</p>
-                        </div>
-                        <div class="salida-llegada">
-                            <h2>Llegada</h2>
-                            <p class="horario">01:15 p.m</p>
-                        </div>
-                        <div class="vuelta">Vuelta</div>
-                        <div class="salida-llegada">
-                            <h2>Salida</h2>
-                            <p class="horario">10:50 a.m</p>
-                        </div>
-                        <div class="salida-llegada">
-                            <h2>Llegada</h2>
-                            <p class="horario">01:15 p.m</p>
-                        </div>
-                        <div class="tarifas">
-                            <p>Tarifa base</p>
-                            <p class="precio-base">$1500.00</p>
-                        </div>
-                        <div class="tarifas">
-                            <p>Club Amigos</p>
-                            <p class="precio-amigo">$1000.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="../PAGES/detalle vuelo.html">
-                    <div class="datos-de-vuelos">
-                        <div class="compania aerolinea">
-                            <p>Compañia: Fly Bondi</p>
-                            <p>|</p>
-                            <p>Nro. de vuelo: 12345678</p>
-                        </div>
-                        <div class="ida">Ida</div>
-                        <div class="salida-llegada">
-                            <h2>Salida</h2>
-                            <p class="horario">10:50 a.m</p>
-                        </div>
-                        <div class="salida-llegada">
-                            <h2>Llegada</h2>
-                            <p class="horario">01:15 p.m</p>
-                        </div>
-                        <div class="vuelta">Vuelta</div>
-                        <div class="salida-llegada">
-                            <h2>Salida</h2>
-                            <p class="horario">10:50 a.m</p>
-                        </div>
-                        <div class="salida-llegada">
-                            <h2>Llegada</h2>
-                            <p class="horario">01:15 p.m</p>
-                        </div>
-                        <div class="tarifas">
-                            <p>Tarifa base</p>
-                            <p class="precio-base">$1500.00</p>
-                        </div>
-                        <div class="tarifas">
-                            <p>Club Amigos</p>
-                            <p class="precio-amigo">$1000.00</p>
-                        </div>
-                    </div>
-                    <a href="../PAGES/detalle vuelo.html">
-                        <div class="datos-de-vuelos">
-                            <div class="compania aerolinea">
-                                <p>Compañia: Jet Smart</p>
-                                <p>|</p>
-                                <p>Nro. de vuelo: 12345678</p>
-                            </div>
-                            <div class="ida">Ida</div>
-                            <div class="salida-llegada">
-                                <h2>Salida</h2>
-                                <p class="horario">10:50 a.m</p>
-                            </div>
-                            <div class="salida-llegada">
-                                <h2>Llegada</h2>
-                                <p class="horario">01:15 p.m</p>
-                            </div>
-                            <div class="vuelta">Vuelta</div>
-                            <div class="salida-llegada">
-                                <h2>Salida</h2>
-                                <p class="horario">10:50 a.m</p>
-                            </div>
-                            <div class="salida-llegada">
-                                <h2>Llegada</h2>
-                                <p class="horario">01:15 p.m</p>
-                            </div>
-                            <div class="tarifas">
-                                <p>Tarifa base</p>
-                                <p class="precio-base">$1500.00</p>
-                            </div>
-                            <div class="tarifas">
-                                <p>Club Amigos</p>
-                                <p class="precio-amigo">$1000.00</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../PAGES/detalle vuelo.html">
-                        <div class="datos-de-vuelos">
-                            <div class="compania aerolinea">
-                                <p>Compañia: Aerolineas Argentinas</p>
-                                <p>|</p>
-                                <p>Nro. de vuelo: 12345678</p>
-                            </div>
-                            <div class="ida">Ida</div>
-                            <div class="salida-llegada">
-                                <h2>Salida</h2>
-                                <p class="horario">10:50 a.m</p>
-                            </div>
-                            <div class="salida-llegada">
-                                <h2>Llegada</h2>
-                                <p class="horario">01:15 p.m</p>
-                            </div>
-                            <div class="vuelta">Vuelta</div>
-                            <div class="salida-llegada">
-                                <h2>Salida</h2>
-                                <p class="horario">10:50 a.m</p>
-                            </div>
-                            <div class="salida-llegada">
-                                <h2>Llegada</h2>
-                                <p class="horario">01:15 p.m</p>
-                            </div>
-                            <div class="tarifas">
-                                <p>Tarifa base</p>
-                                <p class="precio-base">$1500.00</p>
-                            </div>
-                            <div class="tarifas">
-                                <p>Club Amigos</p>
-                                <p class="precio-amigo">$1000.00</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../PAGES/detalle vuelo.html">
-                        <div class="datos-de-vuelos">
-                            <div class="compania aerolinea">
-                                <p>Compañia: Fly Bondi</p>
-                                <p>|</p>
-                                <p>Nro. de vuelo: 12345678</p>
-                            </div>
-                            <div class="ida">Ida</div>
-                            <div class="salida-llegada">
-                                <h2>Salida</h2>
-                                <p class="horario">10:50 a.m</p>
-                            </div>
-                            <div class="salida-llegada">
-                                <h2>Llegada</h2>
-                                <p class="horario">01:15 p.m</p>
-                            </div>
-                            <div class="vuelta">Vuelta</div>
-                            <div class="salida-llegada">
-                                <h2>Salida</h2>
-                                <p class="horario">10:50 a.m</p>
-                            </div>
-                            <div class="salida-llegada">
-                                <h2>Llegada</h2>
-                                <p class="horario">01:15 p.m</p>
-                            </div>
-                            <div class="tarifas">
-                                <p>Tarifa base</p>
-                                <p class="precio-base">$1500.00</p>
-                            </div>
-                            <div class="tarifas">
-                                <p>Club Amigos</p>
-                                <p class="precio-amigo">$1000.00</p>
-                            </div>
-                        </div>
-                        <a href="../PAGES/detalle vuelo.html">
-                            <div class="datos-de-vuelos">
-                                <div class="compania aerolinea">
-                                    <p>Compañia: Jet Smart</p>
-                                    <p>|</p>
-                                    <p>Nro. de vuelo: 12345678</p>
-                                </div>
-                                <div class="ida">Ida</div>
-                                <div class="salida-llegada">
-                                    <h2>Salida</h2>
-                                    <p class="horario">10:50 a.m</p>
-                                </div>
-                                <div class="salida-llegada">
-                                    <h2>Llegada</h2>
-                                    <p class="horario">01:15 p.m</p>
-                                </div>
-                                <div class="vuelta">Vuelta</div>
-                                <div class="salida-llegada">
-                                    <h2>Salida</h2>
-                                    <p class="horario">10:50 a.m</p>
-                                </div>
-                                <div class="salida-llegada">
-                                    <h2>Llegada</h2>
-                                    <p class="horario">01:15 p.m</p>
-                                </div>
-                                <div class="tarifas">
-                                    <p>Tarifa base</p>
-                                    <p class="precio-base">$1500.00</p>
-                                </div>
-                                <div class="tarifas">
-                                    <p>Club Amigos</p>
-                                    <p class="precio-amigo">$1000.00</p>
-                                </div>
-                            </div>
-                        </a>
+ 
+            <!-- GRILLA de resultados -->
+            <section class="grilla-resultados" id="grilla-resultados">
             </section>
+ 
         </section>
     </main>
-
+ 
     <footer id="footer"></footer>
     <script src="../JS/header-footer.js"></script>
     <script src="../JS/script.js"></script>
     <script src="../JS/resultado_busqueda.js"></script>
 </body>
-
+ 
 </html>
+ 

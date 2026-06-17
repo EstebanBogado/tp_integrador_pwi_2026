@@ -1,0 +1,107 @@
+.filtros {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+ 
+.accordion {
+    width: 100%;
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+ 
+.accordion-header {
+    width: 100%;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.6em 1em;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Courier New', Courier, monospace;
+}
+ 
+.accordion-header:hover {
+    background-color: var(--color-primario-dark);
+}
+ 
+.accordion-header.abierto {
+    background-color: var(--color-primario-dark);
+}
+ 
+.accordion-body {
+    display: none;                        /* cerrado por defecto */
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.8em 1em;
+    background-color: var(--color-primario-light);
+}
+ 
+/* Precio */
+.precio-labels {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-blanco);
+    font-size: 0.85em;
+}
+ 
+.range-filtro {
+    width: 100%;
+    accent-color: var(--color-primario-dark);
+    cursor: pointer;
+}
+ 
+/* Checkboxes de tipo vuelo y aerolínea */
+.filtro-label,
+#filtro-aerolineas label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--color-blanco);
+    font-size: 0.9em;
+    cursor: pointer;
+}
+ 
+/* Tarjetas clickeables */
+.datos-de-vuelos {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+ 
+.datos-de-vuelos:hover {
+    transform: translateY(-0.2em);
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.15);
+}
+.equipaje-tag {
+    background-color: rgb(231, 185, 101);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25em;
+    padding: 0.4em 0.8em;
+    font-size: 0.85em;
+}
+ 
+.equipaje-info {
+    color: var(--color-blanco);
+    font-size: 0.8em;
+    margin-top: 0.3em;
+    opacity: 0.85;
+}
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 768px) {
+    .vuelos-disponibles {
+        grid-template-columns: 1fr;
+    }
+ 
+    .filtros {
+        margin-top: 0.5em;
+    }
+}
+ 

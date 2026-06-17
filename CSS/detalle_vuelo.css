@@ -1,0 +1,271 @@
+:root {
+    --color-primario: #5b8787;
+    --color-primario-dark: #3d5f5f;
+    --color-primario-light: rgb(124, 169, 163);
+    --color-primario-xlight: rgba(255, 255, 255, 0.2);
+    --color-blanco: white;
+    --color-texto: rgb(94, 93, 93);
+    --color-borde: rgba(255, 255, 255, 0.4);
+    --color-aceptar: rgb(130, 185, 93);
+    --color-aceptar-dark: rgb(105, 155, 72);
+    --color-reset: rgb(185, 111, 93);
+    --color-reset-dark: rgb(155, 85, 68);
+    --color-asiento-pasajero: rgb(231, 185, 101);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.horario {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor del avión optimizado */
+.armado-del-vuelo {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 1.5em;
+    margin: 0.5em;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0.75em;
+    border: 2px solid var(--color-primario);
+   
+}
+
+.asientos-cabina {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+}
+
+.separacion-asientos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* Reducción de tamaño drástica en los asientos */
+.asiento {
+    width: 7em;
+    height: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(231, 185, 101);
+    background-color: white;
+    border-radius: 0.5em 0.5em 0 0;
+    font-weight: bold;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.asiento:hover {
+    background-color: rgba(231, 185, 101, 0.4);
+}
+
+.asiento-ocupado {
+    background-color: rgb(90, 128, 235);
+    border-color: rgb(70, 100, 200);
+    color: white;
+    cursor: not-allowed;
+}
+
+.asiento-seleccionado {
+    background-color: rgb(130, 185, 93);
+    border-color: rgb(90, 140, 60);
+    color: white;
+}
+
+.asiento-seleccionado:hover {
+    opacity: 0.9;
+}
+
+.etiqueta-asientos {
+    font-size: x-large;
+    border-radius: 0.25em;
+    background-color: rgb(119, 126, 125);
+    color: white;
+    padding: 0.4em 1em;
+    margin: 0.5em;
+}
+
+.ubicacion-cabina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.etiqueta-confirmar {
+    border-radius: 0.25em;
+    background-color: rgb(130, 185, 93);
+    color: white;
+    padding: 0.8em 2em;
+    margin: 1em;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.etiqueta-confirmar:hover {
+    background-color: rgb(105, 155, 72);
+}
+
+.resumen-precio {
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 0.8em 1.5em;
+    margin: 0.5em;
+    display: flex;
+    gap: 1.5em;
+    box-shadow: 0 0.2em 0.8em rgba(0,0,0,0.08);
+}
+
+.resumen-precio p {
+    color: rgb(120, 74, 74);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.resumen-precio span {
+    color: rgb(91, 135, 135);
+    font-size: 1.1em;
+}
+
+.referencia-asientos {
+    display: flex;
+    gap: 1.5em;
+    margin: 0.5em;
+}
+
+.ref-item {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.ref-box {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 0.25em;
+    border: 2px solid rgb(231, 185, 101);
+}
+
+.ref-libre { background-color: white; }
+.ref-ocupado { background-color: rgb(90, 128, 235); border-color: rgb(70, 100, 200); }
+.ref-seleccionado { background-color: rgb(130, 185, 93); border-color: rgb(90, 140, 60); }
+
+.datos-de-vuelos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "compania compania"
+        "ida vuelta"
+        "salida llegada"
+        "tarifas tarifas"
+        "tag tag";
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 0.75em;
+    gap: 0.5em;
+    width: 100%;
+    max-width: 600px;
+}
+
+.compania {
+    grid-area: compania;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #5b8787;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.ida, .vuelta {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(209, 198, 198);
+    color: rgb(120, 74, 74);
+    border-radius: 0.25em;
+    padding: 0.3em;
+    font-weight: bold;
+    width: 100%;
+}
+
+.ida { grid-area: ida; }
+.vuelta { grid-area: vuelta; }
+.salida { grid-area: salida; text-align: center; }
+.llegada { grid-area: llegada; text-align: center; }
+
+.salida-llegada {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    color: rgb(120, 74, 74);
+}
+
+.tarifas {
+    grid-area: tarifas;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(209, 198, 198);
+    color: rgb(120, 74, 74);
+    border-radius: 0.25em;
+    padding: 0.4em;
+    font-size: 0.9em;
+}
+
+#contenedor-equipaje-tag {
+    grid-area: tag;
+    width: 100%;
+}
+
+.equipaje-tag {
+    background-color: rgb(130, 185, 93);
+    color: white;
+    padding: 0.4em;
+    border-radius: 0.25em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.contenedor-opcion-equipaje {
+    margin: 0.5em;
+    padding: 0.6em 1.5em;
+    background-color: white;
+    border-radius: 0.5em;
+    font-weight: bold;
+}
+
+.opcion-equipaje {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.opcion-equipaje input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .datos-de-vuelos {
+        grid-template-columns: 1fr;
+        grid-template-areas: "compania" "ida" "salida" "vuelta" "llegada" "tarifas" "tag";
+    }
+}

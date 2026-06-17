@@ -1,104 +1,184 @@
-.formulario-checkin {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 0.5em;
-    padding: 2em;
-    width: 90%;
-    max-width: 600px;
+.contenedor-checkout {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    width: 95%;
+    max-width: 1000px;
+    margin: 1em auto;
+    align-items: flex-start;
 }
 
-input[type="text"] {
+.formulario-checkin {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0.5em;
+    padding: 1.5em;
+    flex: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 0.4em;
+    padding: 1em;
+    margin-bottom: 1em;
+    background: #fff;
+}
+
+.titulo {
+    font-weight: bold;
+    padding: 0 0.5em;
+    color: #5b8787;
+}
+
+.grupo-campo {
+    margin-bottom: 0.8em;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-campo label {
+    margin: 0 0 0.3em 0;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
     width: 100%;
-    padding: 0.5em;
-    margin: 0.5em 0;
+    padding: 0.6em;
     border-radius: 0.25em;
     border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
 }
-input[type="checkbox"] {
-    margin-right: 0.75em;
-    margin-left: 2em;
+
+.fila-campos {
+    display: flex;
+    gap: 1em;
+}
+
+.fila-campos .grupo-campo {
+    flex: 1;
+}
+
+/* Selectores de método de pago */
+.selectores-pago {
+    display: flex;
+    gap: 2em;
+    margin-bottom: 1em;
+    background: #f5f5f5;
+    padding: 0.6em;
+    border-radius: 0.3em;
+}
+
+.opcion-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0;
+}
+
+.opcion-radio input {
+    margin-right: 0.5em;
+    width: auto;
+}
+
+/* Columna Lateral de Resumen */
+.resumen-vuelo-checkout {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0.5em;
+    padding: 1.5em;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid #5b8787;
+}
+
+.titulo-resumen {
+    color: #3d5f5f;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #5b8787;
+    padding-bottom: 0.3em;
+}
+
+.info-resumen p {
+    margin: 0.5em 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.seccion-cupon {
+    margin: 1em 0;
+}
+
+.fila-cupon {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 0.3em;
+}
+
+.fila-cupon input {
+    flex: 2;
+    padding: 0.4em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+}
+
+.fila-cupon button {
+    flex: 1;
+    background-color: #5b8787;
+    color: white;
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#mensaje-cupon {
+    font-size: 0.85em;
+    margin-top: 0.3em;
+    font-weight: bold;
+}
+
+.total-checkout {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1em;
+    padding-top: 0.5em;
+    border-top: 2px dashed #ccc;
+    color: #c45a45;
 }
 
 .botones {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 1em;
 }
 
-.confirmar {
-    background-color: #82b95d;
-    color: white;
+.confirmar, .cancelar {
+    padding: 0.75em 2em;
     border: none;
     border-radius: 0.25em;
-    padding: 0.75em 1.5em;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.buscar-reserva {
-    background-color: #ccc;
-    color: white;
-    border: none;
-    border-radius: 0.25em;
-    padding: 0.75em 1.5em;
-    font-weight: bold;
-    margin-left: 1em;
-}
-
-.cancelar {
-    background-color: #b96f5d;
-    color: white;
-    border: none;
-    border-radius: 0.25em;
-    padding: 0.75em 1.5em;
-    font-weight: bold;
-}
-
-label {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    margin: 0 1em 0 1em
-}
-
-input {
-    margin-right: 1em;
-}
-
-.contenedor-medio-de-pago {
-    display: flex;
-    flex-direction: column;
-    margin: 2em;
-}
-
-.tarjeta,
-.transferencia {
-    display: none;
-}
-
-#credito:checked~.tarjeta {
-    display: block;
-}
-#credito{
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    width: 1em;
-}
-
-#transferencia{
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    width: 1em;
-}
-
-#transferencia:checked~.transferencia {
-    display: block;
-}
+.confirmar { background-color: #82b95d; color: white; }
+.cancelar { background-color: #b96f5d; color: white; }
 
 .ir-al-check-in {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1em;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .contenedor-checkout {
+        flex-direction: column;
+    }
+    .formulario-checkin, .resumen-vuelo-checkout {
+        width: 100%;
+    }
 }

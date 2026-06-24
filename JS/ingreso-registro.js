@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("nombre", nombre);
     console.log("Guardado correctamente");
 } else {
-    console.log("El nombre está vacío o no es válido");
+    alert("El nombre está vacío o no es válido");
 }
         
         localStorage.setItem("apellido", apellido);

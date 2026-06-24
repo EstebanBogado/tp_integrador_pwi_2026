@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         localStorage.setItem("auth-tab", radios);
         if(!nombre){
-            alert("Ingrese un dato válido")}else{
+            alert("Ingrese un dato válido");
+            return;
+        }else{
         localStorage.setItem("nombre", nombre);}
         
         localStorage.setItem("apellido", apellido);

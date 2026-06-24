@@ -17,11 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const confirmar_datos = document.querySelector('input[name="terminos"]').checked;
 
         localStorage.setItem("auth-tab", radios);
-        if(nombre == ""){
-            alert("Ingrese un dato válido");
-            return;
-        }
-        localStorage.setItem("nombre", nombre);
+       if (nombre && nombre.trim() !== "") {
+    localStorage.setItem("nombre", nombre);
+    console.log("Guardado correctamente");
+} else {
+    console.log("El nombre está vacío o no es válido");
+}
         
         localStorage.setItem("apellido", apellido);
         localStorage.setItem("email-registro", correo);

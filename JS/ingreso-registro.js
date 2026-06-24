@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const confirmar_datos = document.querySelector('input[name="terminos"]').checked;
 
         localStorage.setItem("auth-tab", radios);
-        if(nombre == null){
+        if(nombre == ""){
             alert("Ingrese un dato válido");
             return;
         }

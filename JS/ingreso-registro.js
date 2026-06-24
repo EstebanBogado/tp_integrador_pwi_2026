@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const confirmar_datos = document.querySelector('input[name="terminos"]').checked;
 
         localStorage.setItem("auth-tab", radios);
-        localStorage.setItem("nombre", nombre);
+        if(!nombre){
+            alert("Ingrese un dato válido")}else{
+        localStorage.setItem("nombre", nombre);}
+        
         localStorage.setItem("apellido", apellido);
         localStorage.setItem("email-registro", correo);
         localStorage.setItem("dni", dni);

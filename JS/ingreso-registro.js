@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if(!nombre){
             alert("Ingrese un dato válido");
             return;
-        }else{
-        localStorage.setItem("nombre", nombre);}
+        }
+        localStorage.setItem("nombre", nombre);
         
         localStorage.setItem("apellido", apellido);
         localStorage.setItem("email-registro", correo);
